@@ -1,0 +1,185 @@
+-- Hồ sơ công ty
+CREATE TABLE HoSoCongTy (
+    Ten_cong_ty VARCHAR(100),
+    MA_SIC VARCHAR(10) PRIMARY KEY,
+    Ten_nganh VARCHAR(50),
+    MA_ICB INTEGER,
+    Nam_thanh_lap DATE,
+    Von_dieu_le DECIMAL(15, 2),
+    So_luong_nhan_vien INTEGER,
+    So_luong_chi_nhanh INTEGER,
+    Ngay_niem_yet DATE,
+    San_niem_yet VARCHAR(50),
+    Gia_chao_san DECIMAL(15, 2),
+    KL_dang_niem_yet INTEGER,
+    Thi_gia_von DECIMAL(15, 2),
+    SLCP_luu_hanh INTEGER
+);
+
+-- Lịch sử giá
+
+CREATE TABLE LichSuGia (
+    Time DATE,
+    open TIME,
+    High DECIMAL(10,2),
+    low DECIMAL(10,2),
+    close DECIMAL(10,2),
+    Volume INTEGER,
+    MA_SIC VARCHAR(10),
+    PRIMARY KEY (Time, MA_SIC), 
+    FOREIGN KEY (MA_SIC) REFERENCES HoSoCongTy(MA_SIC) -- Khóa ngoại
+);
+
+
+-- Lịch sử giao dịch intraday
+
+CREATE TABLE LichSuGiaoDich (
+    Time TIMESTAMP,
+    Price DECIMAL(10,2),
+    Volume INTEGER,
+    Match_Type VARCHAR(4),
+    id INTEGER PRIMARY KEY,
+    FOREIGN KEY (MA_SIC) REFERENCES HoSoCongTy(MA_SIC) -- Khóa ngoại
+)
+
+
+
+-- Báo cáo tài chính
+CREATE TABLE CanDoiKeToan (
+    Chi_Tieu VARCHAR(255), -- Cột chỉ tiêu
+    MA_SIC VARCHAR(10),    -- Cột mã số công ty
+    Ma_Tai_Khoan INTEGER ,  -- mã số của chỉ tiêu
+    Q3_2024 DECIMAL(15,2),
+    Q2_2024 DECIMAL(15,2),
+    Q1_2024 DECIMAL(15,2),
+    Q4_2023 DECIMAL(15,2),
+    Q3_2023 DECIMAL(15,2),
+    Q2_2023 DECIMAL(15,2),
+    Q1_2023 DECIMAL(15,2),
+    Q4_2022 DECIMAL(15,2),
+    Q3_2022 DECIMAL(15,2),
+    Q2_2022 DECIMAL(15,2),
+    Q1_2022 DECIMAL(15,2),
+    Q4_2021 DECIMAL(15,2),
+    Q3_2021 DECIMAL(15,2),
+    Q2_2021 DECIMAL(15,2),
+    Q1_2021 DECIMAL(15,2),
+    Q4_2020 DECIMAL(15,2),
+    Q3_2020 DECIMAL(15,2),
+    Q2_2020 DECIMAL(15,2),
+    Q1_2020 DECIMAL(15,2),
+    Q4_2019 DECIMAL(15,2),
+    Q3_2019 DECIMAL(15,2),
+    Q2_2019 DECIMAL(15,2),
+    Q1_2019 DECIMAL(15,2),
+    Q4_2018 DECIMAL(15,2),
+    Q3_2018 DECIMAL(15,2),
+    Q2_2018 DECIMAL(15,2),
+    Q1_2018 DECIMAL(15,2),
+    Q4_2017 DECIMAL(15,2),
+    Q3_2017 DECIMAL(15,2),
+    Q2_2017 DECIMAL(15,2),
+    Q1_2017 DECIMAL(15,2),
+    Q4_2016 DECIMAL(15,2),
+    Q3_2016 DECIMAL(15,2),
+    Q2_2016 DECIMAL(15,2),
+    Q1_2016 DECIMAL(15,2),
+    Q4_2015 DECIMAL(15,2),
+    Q3_2015 DECIMAL(15,2),
+    Q2_2015 DECIMAL(15,2),
+    PRIMARY KEY (Ma_Tai_Khoan, MA_SIC)
+    FOREIGN KEY (MA_SIC) REFERENCES HoSoCongTy(MA_SIC)
+);
+
+
+CREATE TABLE LuuChuyenTienTe (
+    Chi_Tieu VARCHAR(255), -- Cột chỉ tiêu
+    MA_SIC VARCHAR(10),    -- Cột mã số công ty
+    Ma_Tai_Khoan INTEGER ,  -- mã số của chỉ tiêu
+    Q3_2024 DECIMAL(15,2),
+    Q2_2024 DECIMAL(15,2),
+    Q1_2024 DECIMAL(15,2),
+    Q4_2023 DECIMAL(15,2),
+    Q3_2023 DECIMAL(15,2),
+    Q2_2023 DECIMAL(15,2),
+    Q1_2023 DECIMAL(15,2),
+    Q4_2022 DECIMAL(15,2),
+    Q3_2022 DECIMAL(15,2),
+    Q2_2022 DECIMAL(15,2),
+    Q1_2022 DECIMAL(15,2),
+    Q4_2021 DECIMAL(15,2),
+    Q3_2021 DECIMAL(15,2),
+    Q2_2021 DECIMAL(15,2),
+    Q1_2021 DECIMAL(15,2),
+    Q4_2020 DECIMAL(15,2),
+    Q3_2020 DECIMAL(15,2),
+    Q2_2020 DECIMAL(15,2),
+    Q1_2020 DECIMAL(15,2),
+    Q4_2019 DECIMAL(15,2),
+    Q3_2019 DECIMAL(15,2),
+    Q2_2019 DECIMAL(15,2),
+    Q1_2019 DECIMAL(15,2),
+    Q4_2018 DECIMAL(15,2),
+    Q3_2018 DECIMAL(15,2),
+    Q2_2018 DECIMAL(15,2),
+    Q1_2018 DECIMAL(15,2),
+    Q4_2017 DECIMAL(15,2),
+    Q3_2017 DECIMAL(15,2),
+    Q2_2017 DECIMAL(15,2),
+    Q1_2017 DECIMAL(15,2),
+    Q4_2016 DECIMAL(15,2),
+    Q3_2016 DECIMAL(15,2),
+    Q2_2016 DECIMAL(15,2),
+    Q1_2016 DECIMAL(15,2),
+    Q4_2015 DECIMAL(15,2),
+    Q3_2015 DECIMAL(15,2),
+    Q2_2015 DECIMAL(15,2),
+    PRIMARY KEY (Ma_Tai_Khoan, MA_SIC)
+    FOREIGN KEY (MA_SIC) REFERENCES HoSoCongTy(MA_SIC)
+);
+
+CREATE TABLE KetQuaKinhDoanh (
+    Chi_Tieu VARCHAR(255), -- Cột chỉ tiêu
+    MA_SIC VARCHAR(10),    -- Cột mã số công ty
+    Ma_Tai_Khoan INTEGER ,  -- mã số của chỉ tiêu
+    Q3_2024 DECIMAL(15,2),
+    Q2_2024 DECIMAL(15,2),
+    Q1_2024 DECIMAL(15,2),
+    Q4_2023 DECIMAL(15,2),
+    Q3_2023 DECIMAL(15,2),
+    Q2_2023 DECIMAL(15,2),
+    Q1_2023 DECIMAL(15,2),
+    Q4_2022 DECIMAL(15,2),
+    Q3_2022 DECIMAL(15,2),
+    Q2_2022 DECIMAL(15,2),
+    Q1_2022 DECIMAL(15,2),
+    Q4_2021 DECIMAL(15,2),
+    Q3_2021 DECIMAL(15,2),
+    Q2_2021 DECIMAL(15,2),
+    Q1_2021 DECIMAL(15,2),
+    Q4_2020 DECIMAL(15,2),
+    Q3_2020 DECIMAL(15,2),
+    Q2_2020 DECIMAL(15,2),
+    Q1_2020 DECIMAL(15,2),
+    Q4_2019 DECIMAL(15,2),
+    Q3_2019 DECIMAL(15,2),
+    Q2_2019 DECIMAL(15,2),
+    Q1_2019 DECIMAL(15,2),
+    Q4_2018 DECIMAL(15,2),
+    Q3_2018 DECIMAL(15,2),
+    Q2_2018 DECIMAL(15,2),
+    Q1_2018 DECIMAL(15,2),
+    Q4_2017 DECIMAL(15,2),
+    Q3_2017 DECIMAL(15,2),
+    Q2_2017 DECIMAL(15,2),
+    Q1_2017 DECIMAL(15,2),
+    Q4_2016 DECIMAL(15,2),
+    Q3_2016 DECIMAL(15,2),
+    Q2_2016 DECIMAL(15,2),
+    Q1_2016 DECIMAL(15,2),
+    Q4_2015 DECIMAL(15,2),
+    Q3_2015 DECIMAL(15,2),
+    Q2_2015 DECIMAL(15,2),
+    PRIMARY KEY (Ma_Tai_Khoan, MA_SIC)
+    FOREIGN KEY (MA_SIC) REFERENCES HoSoCongTy(MA_SIC)
+);
