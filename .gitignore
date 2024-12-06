@@ -1,2 +1,3 @@
-CheckVNStock.py
 TestVnStock.ipynb
+__pycache__
+cookies.pkl

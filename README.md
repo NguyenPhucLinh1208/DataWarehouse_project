@@ -1,3 +1,10 @@
-Đây là dự án xây dựng datawarehouse về chứng khoán Việt Nam, ngành Bất Động Sản.
+# 0. Overview
 
-Dự án kết hợp công nghệ : python + thư viện VN_Stock + airflow + kafka + PostgreSql.
+# 1. Dữ liệu
+
+## a. Công ty
+
+* Đầu tiên, lấy thông tin tên công ty bất động sản, lưu vào file MaCks.txt
+* Sau đó, crawl dữ liệu từ SSI về hồ sơ công ty.
+* thực hiện crawl trong 127 mã, lấy thông tin cơ bản và thông tin niêm yét
+
