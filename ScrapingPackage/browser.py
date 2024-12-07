@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 
-def init_driver():
+def init_driver(chrome):
     # Khởi tạo tùy chọn cho Chrome
     chrome_options = Options()
     
@@ -26,9 +26,16 @@ def init_driver():
     user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
     chrome_options.add_argument(f"user-agent={user_agent}")  # Đặt user-agent để trình duyệt giống với người dùng thực.
 
+    prefs = {
+        "profile.managed_default_content_settings.images": 2,  # Tắt tải hình ảnh.
+        "profile.managed_default_content_settings.fonts": 2,   # Tắt tải font.
+    }
+    chrome_options.add_experimental_option("prefs", prefs)
+
+
     # Khởi tạo Selenium WebDriver để kết nối đến Selenium Server trên container:
     driver = webdriver.Remote(
-        command_executor="http://chrome:4444/wd/hub",  # Địa chỉ Selenium Server trong container.
+        command_executor=chrome,  # Địa chỉ Selenium Server trong container.
         options=chrome_options  # Truyền các tùy chọn Chrome đã thiết lập.
     )
     return driver  # Trả về đối tượng WebDriver.

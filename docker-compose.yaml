@@ -8,8 +8,15 @@ x-airflow-common:
     AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflowmeta@host.docker.internal:5432/airflow
     AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session'
     AIRFLOW__SCHEDULER__RUN_DURATION: 30
+    PYTHONPATH: /usr/local/lib/python3.12/site-packages  # Thiết lập PYTHONPATH
+    
   volumes:
-    - ${DATAWAREHOUSE_PROJ_DIR:-.}/Airflow:/opt/datawarehouse/Airflow
+    - ${DATAWAREHOUSE_PROJ_DIR:-.}/Airflow:/opt/airflow # mount thế này mới đúng, vì cấu hình mặc định trong container của airflow chứa dags trong này
+    - ${DATAWAREHOUSE_PROJ_DIR:-.}/ScrapingPackage:/opt/ScrapingPackage
+    - ${DATAWAREHOUSE_PROJ_DIR:-.}/Tasks:/opt/Tasks
+    - ${DATAWAREHOUSE_PROJ_DIR:-.}/Kafka:/opt/Kafka
+    - ${DATAWAREHOUSE_PROJ_DIR:-.}/SQL:/opt/SQL
+    - shared-libs:/usr/local/lib/python3.12/site-packages
   user: "${DATAWAREHOUSE_UID:-50000}:0"
 
 services:
@@ -19,6 +26,8 @@ services:
     build:
       context: .
       dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - shared-libs:/usr/local/lib/python3.12/site-packages
     networks:
       - airflow-net
       # - kafka-net
@@ -72,6 +81,8 @@ services:
       _AIRFLOW_WWW_USER_USERNAME: ${_AIRFLOW_WWW_USER_USERNAME:-airflowDWH}
       _AIRFLOW_WWW_USER_PASSWORD: ${_AIRFLOW_WWW_USER_PASSWORD:-airflowDWH}
     user: "0:0"
+    depends_on: 
+      - data_warehouse  # để lấy đúng danh sách thư viện, cần container này chạy đầu tiên
     networks:
       - airflow-net
 
@@ -92,6 +103,26 @@ services:
     restart: always
     networks:
       - airflow-net
+
+
+# dịch vụ liên qun đến web scraping
+  chrome_1:
+    image: selenium/standalone-chrome:latest
+    shm_size: '2gb'
+    environment:
+      - DBUS_SESSION_BUS_ADDRESS=/dev/null
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:4444/wd/hub/status || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    ports:
+      - "4445:4444"
+    restart: always
+    networks:
+      - airflow-net
+
 
 
 
@@ -186,6 +217,7 @@ networks:
   # kafka-net:
   airflow-net:
 
-# volumes:
+volumes:
+  shared-libs: # Volume dùng chung cho các thư viện
 #   kafka_data:
 #   zookeeper_data:

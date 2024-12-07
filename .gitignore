@@ -1,3 +1,5 @@
 TestVnStock.ipynb
 __pycache__
 cookies.pkl
+.env
+Webserver_config.py

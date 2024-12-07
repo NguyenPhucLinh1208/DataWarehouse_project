@@ -8,5 +8,5 @@ MaCks = stock.listing.symbols_by_industries()
 filtered = MaCks[MaCks['icb_name3'].str.contains('bất động sản', case=False, na=False)]
 filtered = filtered.reset_index(drop=True)
 MaCk_bds = filtered['symbol']
-path = '/opt/datawarehouse/Tasks/HistoricalData/MaCks.txt'
+path = '/opt/Tasks/HistoricalData/MaCks.txt'
 MaCk_bds.to_csv(path, index=False, header=False)

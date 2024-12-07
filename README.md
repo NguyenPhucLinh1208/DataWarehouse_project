@@ -1,5 +1,13 @@
 # 0. Overview
 
+Thiết lập docker như thế nào:
+
+tôi xây dựng trong devcontainer, sẽ dùng container chính là data warehouse, được build trực tiếp từ dockerfile
+
+để khắc phục các vấn đề như đồng bộ dữ liệu, dùng volumes, và enviroments
+
+để chia sẻ không qua ip, mà qua tên, dùng network
+
 # 1. Dữ liệu
 
 ## a. Công ty

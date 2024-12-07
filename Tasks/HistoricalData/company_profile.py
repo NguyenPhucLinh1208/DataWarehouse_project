@@ -16,7 +16,7 @@ def main_hosocongty():
         MaCks = [line.strip() for line in f]
     
     # Khởi tạo trình duyệt
-    driver = init_driver()
+    driver = init_driver("http://chrome:4444/wd/hub")
     driver.get("https://iboard.ssi.com.vn/")
 
     ComDatas = []

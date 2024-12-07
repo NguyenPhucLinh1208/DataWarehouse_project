@@ -8,16 +8,16 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean
 
 # Set working directory
-WORKDIR /opt/datawarehouse
+WORKDIR /opt
 
 
 RUN useradd -m -d /home/datawarehouse -s /bin/bash datawarehouse && \
-    chown -R datawarehouse:datawarehouse /opt/datawarehouse
+    chown -R datawarehouse:datawarehouse /opt
 
 # Upgrade pip and install project dependencies
-COPY .devcontainer/requirements.txt /opt/datawarehouse/.devcontainer/requirements.txt
+COPY .devcontainer/requirements.txt /opt/.devcontainer/requirements.txt
 
-RUN pip install --upgrade pip && pip install --no-cache-dir -r /opt/datawarehouse/.devcontainer/requirements.txt
+RUN pip install --upgrade pip && pip install --no-cache-dir -r /opt/.devcontainer/requirements.txt
 
 USER datawarehouse
 
