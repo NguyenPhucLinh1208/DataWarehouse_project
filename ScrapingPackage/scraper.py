@@ -42,32 +42,37 @@ def enter_stock_code(driver, stock_code):
     stock_input.send_keys(stock_code)
 
     # sau khi điền, sẽ xuất hiện một menu lựa chọn, cần chờ nó xuất hiện rồi ấn Enter
-    WebDriverWait(driver, 10).until(lambda d: d.find_element(By.CSS_SELECTOR, "div.scrollbars").is_displayed())
+    WebDriverWait(driver, 30).until(lambda d: d.find_element(By.CSS_SELECTOR, "div.scrollbars").is_displayed())
     stock_input.send_keys(Keys.RETURN)
     
     # sẽ có độ trễ do tải, lúc này, sẽ xuất hiện icon mô tả đang tải, cần chờ nó biến mất
-    WebDriverWait(driver, 10).until(
+    WebDriverWait(driver, 30).until(
         EC.invisibility_of_element_located((By.CSS_SELECTOR, "div.loading-spinner"))
     )
 
-def scrape_data_report(driver):
+def scrape_data_report(driver, report_type):
     """
     Hàm thực hiện crawl data trên 1 trang giao diện, tại một thời điểm.
     """
     total_col_names, row_datas = [], []
 
     # Lấy giá trị tên cột, được đánh dấu trong thẻ thead
-    WebDriverWait(driver, 30, poll_frequency=0.1).until(EC.presence_of_element_located((By.XPATH, "//thead")))
+    WebDriverWait(driver, 45, poll_frequency=0.1).until(EC.presence_of_element_located((By.XPATH, "//thead")))
     # lấy phần tử span trong thẻ thead
-    col_names = driver.find_elements(By.XPATH, "//thead//th//span")
+    col_names = driver.find_elements(By.XPATH, "//thead//tr//th//span")
     # Lấy tên cột, loại bỏ khoảng trống
     total_col_names = [col.text.strip() for col in col_names if col.text.strip()]  
     # Không có dữ liệu, return
     if not total_col_names:
         return None
-    
-    # Nếu có dữ liệu, tiến hành crawl các hàng, nằm trong thẻ body
-    rows = WebDriverWait(driver, 10, poll_frequency=0.1).until(EC.presence_of_all_elements_located((By.XPATH, "//tbody//tr")))[1:]
+
+    # Nếu có dữ liệu, tiến hành crawl các hàng, nằm trong thẻ tbody
+    rows_xpath = "//tbody//tr"
+    if report_type == "Cân Đối Kế Toán":
+        rows = WebDriverWait(driver, 30, poll_frequency=0.1).until(EC.presence_of_all_elements_located((By.XPATH, rows_xpath)))[1:]
+    else:
+        rows = WebDriverWait(driver, 30, poll_frequency=0.1).until(EC.presence_of_all_elements_located((By.XPATH, rows_xpath)))
+
     row_datas = [
         [value.text.strip() for value in row.find_elements(By.XPATH, ".//td") if value.text.strip()]
         for row in rows if row.text.strip()
@@ -77,16 +82,28 @@ def scrape_data_report(driver):
     Table_long = pd.melt(Table, id_vars=["CHỈ TIÊU"], var_name="THỜI GIAN", value_name="GIÁ TRỊ")
     return Table_long
 
-def get_financial_data(driver, stock_code, year):
 
+def get_financial_data(driver, stock_code, year, report_type):
     # Lấy dữ liệu cho từng khoảng thời gian
     select_option_Xpath(driver, "(//div[contains(@class,'list-filter')]//button)[2]")
+    # Chờ phần tử tồn tại trong DOM
+    option = WebDriverWait(driver, 60).until(
+        EC.presence_of_element_located((By.XPATH, f"//div[contains(@class, 'scrollbars')]//a[@title='{year}']"))
+    )
+    # Cuộn đến phần tử bằng JavaScript
+    driver.execute_script("arguments[0].scrollIntoView(true);", option)
     select_option_Xpath(driver, f"//div[contains(@class, 'scrollbars')]//a[@title='{year}']")
-    df_financial_data = scrape_data_report(driver)
-    if df_financial_data is not None:
+    df_financial_data = scrape_data_report(driver, report_type)
+    if df_financial_data is None:
+        try:
+            WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.XPATH, "//div[@class='no-data']/span[text()='Dữ liệu đang cập nhật']")))
+        except:
+            print(f"Trang năm {year} của mã {stock_code} chưa được load hết")
+    else:
         df_financial_data["Mã Chứng Khoán"] = stock_code
 
     return df_financial_data
+
 
 def get_total_financial_data(driver, report_type, stock_code):
     """
@@ -94,35 +111,30 @@ def get_total_financial_data(driver, report_type, stock_code):
     """
     Total_report = pd.DataFrame()
     select_option_Xpath(driver, f"//li[@class='nav-item m-tabs__item']//a[.//span[text()='{report_type}']]")
-    WebDriverWait(driver, 10, poll_frequency=0.1).until(EC.invisibility_of_element_located((By.CSS_SELECTOR, "div.loading-spinner")))
+    WebDriverWait(driver, 30, poll_frequency=0.1).until(EC.invisibility_of_element_located((By.CSS_SELECTOR, "div.loading-spinner")))
 
     missing_years = None
-    skip = False  # Biến kiểm tra để bỏ qua các năm sau nếu cần
+    years = ["2024", "2020", "2017"]
 
-    report1 = get_financial_data(driver, stock_code, "2024")
-    if report1 is not None:
-        Total_report = pd.concat([Total_report, report1], ignore_index=True)
-    else:
-        missing_years = '2024'
-        skip = True  # Nếu report1 là None, bỏ qua các lần sau
-
-    if not skip:
-        report2 = get_financial_data(driver, stock_code, "2020")
-        if report2 is not None:
-            Total_report = pd.concat([Total_report, report2], ignore_index=True)
+    for year in years:
+        report = get_financial_data(driver, stock_code, year, report_type)
+        if report is not None:
+            Total_report = pd.concat([Total_report, report], ignore_index=True)
         else:
-            missing_years = '2020'
-            skip = True
-
-    if not skip:
-        report3 = get_financial_data(driver, stock_code, "2017")
-        if report3 is not None:
-            Total_report = pd.concat([Total_report, report3], ignore_index=True)
-        else:
-            missing_years = '2017'
+            missing_years = year
+            break
 
     if missing_years:
         print(f"Dữ liệu {report_type} cho mã {stock_code} thiếu từ các năm: {missing_years}.") 
 
     return Total_report
 
+
+
+def get_new_financial_data(driver, report_type, stock_code, year):
+
+    new_report_data = pd.DataFrame()
+    select_option_Xpath(driver, f"//li[@class='nav-item m-tabs__item']//a[.//span[text()='{report_type}']]")
+    WebDriverWait(driver, 10, poll_frequency=0.1).until(EC.invisibility_of_element_located((By.CSS_SELECTOR, "div.loading-spinner")))
+    new_report_data = get_financial_data(driver, stock_code, year)
+    return new_report_data

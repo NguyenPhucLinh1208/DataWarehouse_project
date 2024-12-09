@@ -1,185 +1,61 @@
--- Hồ sơ công ty
 CREATE TABLE HoSoCongTy (
-    Ten_cong_ty VARCHAR(100),
-    MA_SIC VARCHAR(10) PRIMARY KEY,
-    Ten_nganh VARCHAR(50),
-    MA_ICB INTEGER,
-    Nam_thanh_lap DATE,
-    Von_dieu_le DECIMAL(15, 2),
-    So_luong_nhan_vien INTEGER,
-    So_luong_chi_nhanh INTEGER,
-    Ngay_niem_yet DATE,
-    San_niem_yet VARCHAR(50),
-    Gia_chao_san DECIMAL(15, 2),
-    KL_dang_niem_yet INTEGER,
-    Thi_gia_von DECIMAL(15, 2),
-    SLCP_luu_hanh INTEGER
+    Ten_Cong_Ty TEXT,
+    Ma_SIC TEXT,
+    Ten_Nganh TEXT,
+    Ma_Nganh_ICB TEXT,
+    Nam_Thanh_Lap TEXT,
+    Von_Dieu_LE TEXT,  -- Sử dụng TEXT để lưu giữ giá trị với đơn vị
+    So_Luong_Nhan_Vien TEXT,
+    So_Luong_Chi_Nhanh INTEGER,
+    Ngay_Niem_Yet DATE,
+    Noi_Niem_Yet TEXT,
+    Gia_Chao_San TEXT,
+    KL_Dang_Niem_Yet TEXT,  -- Sử dụng TEXT để lưu giữ dữ liệu có đơn vị
+    Thi_Gia_Von TEXT,  -- Sử dụng TEXT để lưu giữ giá trị có đơn vị
+    SLCP_Luu_Hanh TEXT  -- Sử dụng TEXT để lưu giữ giá trị có đơn vị
 );
-
--- Lịch sử giá
 
 CREATE TABLE LichSuGia (
-    Time DATE,
-    open TIME,
-    High DECIMAL(10,2),
-    low DECIMAL(10,2),
-    close DECIMAL(10,2),
-    Volume INTEGER,
-    MA_SIC VARCHAR(10),
-    PRIMARY KEY (Time, MA_SIC), 
-    FOREIGN KEY (MA_SIC) REFERENCES HoSoCongTy(MA_SIC) -- Khóa ngoại
+    Thoi_Gian DATE,
+    Gia_Opening TEXT,
+    Gia_High TEXT,
+    Gia_Low TEXT,
+    Gia_Closing TEXT,
+    Khoi_Luong INTEGER,
+    Ma_SIC TEXT
 );
 
-
--- Lịch sử giao dịch intraday
-
-CREATE TABLE LichSuGiaoDich (
-    Time TIMESTAMP,
-    Price DECIMAL(10,2),
-    Volume INTEGER,
-    Match_Type VARCHAR(4),
-    id INTEGER PRIMARY KEY,
-    FOREIGN KEY (MA_SIC) REFERENCES HoSoCongTy(MA_SIC) -- Khóa ngoại
-)
-
-
-
--- Báo cáo tài chính
 CREATE TABLE CanDoiKeToan (
-    Chi_Tieu VARCHAR(255), -- Cột chỉ tiêu
-    MA_SIC VARCHAR(10),    -- Cột mã số công ty
-    Ma_Tai_Khoan INTEGER ,  -- mã số của chỉ tiêu
-    Q3_2024 DECIMAL(15,2),
-    Q2_2024 DECIMAL(15,2),
-    Q1_2024 DECIMAL(15,2),
-    Q4_2023 DECIMAL(15,2),
-    Q3_2023 DECIMAL(15,2),
-    Q2_2023 DECIMAL(15,2),
-    Q1_2023 DECIMAL(15,2),
-    Q4_2022 DECIMAL(15,2),
-    Q3_2022 DECIMAL(15,2),
-    Q2_2022 DECIMAL(15,2),
-    Q1_2022 DECIMAL(15,2),
-    Q4_2021 DECIMAL(15,2),
-    Q3_2021 DECIMAL(15,2),
-    Q2_2021 DECIMAL(15,2),
-    Q1_2021 DECIMAL(15,2),
-    Q4_2020 DECIMAL(15,2),
-    Q3_2020 DECIMAL(15,2),
-    Q2_2020 DECIMAL(15,2),
-    Q1_2020 DECIMAL(15,2),
-    Q4_2019 DECIMAL(15,2),
-    Q3_2019 DECIMAL(15,2),
-    Q2_2019 DECIMAL(15,2),
-    Q1_2019 DECIMAL(15,2),
-    Q4_2018 DECIMAL(15,2),
-    Q3_2018 DECIMAL(15,2),
-    Q2_2018 DECIMAL(15,2),
-    Q1_2018 DECIMAL(15,2),
-    Q4_2017 DECIMAL(15,2),
-    Q3_2017 DECIMAL(15,2),
-    Q2_2017 DECIMAL(15,2),
-    Q1_2017 DECIMAL(15,2),
-    Q4_2016 DECIMAL(15,2),
-    Q3_2016 DECIMAL(15,2),
-    Q2_2016 DECIMAL(15,2),
-    Q1_2016 DECIMAL(15,2),
-    Q4_2015 DECIMAL(15,2),
-    Q3_2015 DECIMAL(15,2),
-    Q2_2015 DECIMAL(15,2),
-    PRIMARY KEY (Ma_Tai_Khoan, MA_SIC)
-    FOREIGN KEY (MA_SIC) REFERENCES HoSoCongTy(MA_SIC)
-);
-
-
-CREATE TABLE LuuChuyenTienTe (
-    Chi_Tieu VARCHAR(255), -- Cột chỉ tiêu
-    MA_SIC VARCHAR(10),    -- Cột mã số công ty
-    Ma_Tai_Khoan INTEGER ,  -- mã số của chỉ tiêu
-    Q3_2024 DECIMAL(15,2),
-    Q2_2024 DECIMAL(15,2),
-    Q1_2024 DECIMAL(15,2),
-    Q4_2023 DECIMAL(15,2),
-    Q3_2023 DECIMAL(15,2),
-    Q2_2023 DECIMAL(15,2),
-    Q1_2023 DECIMAL(15,2),
-    Q4_2022 DECIMAL(15,2),
-    Q3_2022 DECIMAL(15,2),
-    Q2_2022 DECIMAL(15,2),
-    Q1_2022 DECIMAL(15,2),
-    Q4_2021 DECIMAL(15,2),
-    Q3_2021 DECIMAL(15,2),
-    Q2_2021 DECIMAL(15,2),
-    Q1_2021 DECIMAL(15,2),
-    Q4_2020 DECIMAL(15,2),
-    Q3_2020 DECIMAL(15,2),
-    Q2_2020 DECIMAL(15,2),
-    Q1_2020 DECIMAL(15,2),
-    Q4_2019 DECIMAL(15,2),
-    Q3_2019 DECIMAL(15,2),
-    Q2_2019 DECIMAL(15,2),
-    Q1_2019 DECIMAL(15,2),
-    Q4_2018 DECIMAL(15,2),
-    Q3_2018 DECIMAL(15,2),
-    Q2_2018 DECIMAL(15,2),
-    Q1_2018 DECIMAL(15,2),
-    Q4_2017 DECIMAL(15,2),
-    Q3_2017 DECIMAL(15,2),
-    Q2_2017 DECIMAL(15,2),
-    Q1_2017 DECIMAL(15,2),
-    Q4_2016 DECIMAL(15,2),
-    Q3_2016 DECIMAL(15,2),
-    Q2_2016 DECIMAL(15,2),
-    Q1_2016 DECIMAL(15,2),
-    Q4_2015 DECIMAL(15,2),
-    Q3_2015 DECIMAL(15,2),
-    Q2_2015 DECIMAL(15,2),
-    PRIMARY KEY (Ma_Tai_Khoan, MA_SIC)
-    FOREIGN KEY (MA_SIC) REFERENCES HoSoCongTy(MA_SIC)
+    Chi_Tieu TEXT,
+    Thoi_Gian TEXT,
+    Gia_Tri TEXT,  -- Sử dụng TEXT vì giá trị có thể có đơn vị
+    Ma_SIC TEXT
 );
 
 CREATE TABLE KetQuaKinhDoanh (
-    Chi_Tieu VARCHAR(255), -- Cột chỉ tiêu
-    MA_SIC VARCHAR(10),    -- Cột mã số công ty
-    Ma_Tai_Khoan INTEGER ,  -- mã số của chỉ tiêu
-    Q3_2024 DECIMAL(15,2),
-    Q2_2024 DECIMAL(15,2),
-    Q1_2024 DECIMAL(15,2),
-    Q4_2023 DECIMAL(15,2),
-    Q3_2023 DECIMAL(15,2),
-    Q2_2023 DECIMAL(15,2),
-    Q1_2023 DECIMAL(15,2),
-    Q4_2022 DECIMAL(15,2),
-    Q3_2022 DECIMAL(15,2),
-    Q2_2022 DECIMAL(15,2),
-    Q1_2022 DECIMAL(15,2),
-    Q4_2021 DECIMAL(15,2),
-    Q3_2021 DECIMAL(15,2),
-    Q2_2021 DECIMAL(15,2),
-    Q1_2021 DECIMAL(15,2),
-    Q4_2020 DECIMAL(15,2),
-    Q3_2020 DECIMAL(15,2),
-    Q2_2020 DECIMAL(15,2),
-    Q1_2020 DECIMAL(15,2),
-    Q4_2019 DECIMAL(15,2),
-    Q3_2019 DECIMAL(15,2),
-    Q2_2019 DECIMAL(15,2),
-    Q1_2019 DECIMAL(15,2),
-    Q4_2018 DECIMAL(15,2),
-    Q3_2018 DECIMAL(15,2),
-    Q2_2018 DECIMAL(15,2),
-    Q1_2018 DECIMAL(15,2),
-    Q4_2017 DECIMAL(15,2),
-    Q3_2017 DECIMAL(15,2),
-    Q2_2017 DECIMAL(15,2),
-    Q1_2017 DECIMAL(15,2),
-    Q4_2016 DECIMAL(15,2),
-    Q3_2016 DECIMAL(15,2),
-    Q2_2016 DECIMAL(15,2),
-    Q1_2016 DECIMAL(15,2),
-    Q4_2015 DECIMAL(15,2),
-    Q3_2015 DECIMAL(15,2),
-    Q2_2015 DECIMAL(15,2),
-    PRIMARY KEY (Ma_Tai_Khoan, MA_SIC)
-    FOREIGN KEY (MA_SIC) REFERENCES HoSoCongTy(MA_SIC)
+    Chi_Tieu TEXT,
+    Thoi_Gian TEXT,
+    Gia_Tri TEXT,  -- Sử dụng TEXT để lưu giá trị có đơn vị
+    Ma_SIC TEXT
+);
+
+CREATE TABLE LuuChuyenTienTe (
+    Chi_Tieu TEXT,
+    Thoi_Gian TEXT,
+    Gia_Tri TEXT,  -- Sử dụng TEXT để lưu giá trị có đơn vị
+    Ma_SIC TEXT
+);
+
+CREATE TABLE KetQuaGiaoDich (
+    Thoi_Gian DATE,
+    Gia TEXT,
+    Khoi_Luong INTEGER,
+    Loai_Giao_Dich TEXT,
+    ID TEXT,
+    Ma_SIC TEXT
+);
+
+create table TaiKhoan (
+	ChiTieu TEXT,
+	Ma_Tai_Khoan TEXT
 );

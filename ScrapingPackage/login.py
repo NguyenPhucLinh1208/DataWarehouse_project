@@ -1,9 +1,9 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import time
-
+from selenium.common.exceptions import TimeoutException
 from ScrapingPackage.navigation import select_option_Xpath
+
 def login(driver, url, username, password):
 
     driver.get(url)
@@ -23,10 +23,4 @@ def login(driver, url, username, password):
     password_input.send_keys(password)
     # click vào nút đăng nhập
     select_option_Xpath(driver, "//button[text()='Đăng nhập']")
-
-    WebDriverWait(driver, 60).until(
-        EC.presence_of_element_located(
-            (By.XPATH, "//span[text()='Connected']")
-        )
-    )
 

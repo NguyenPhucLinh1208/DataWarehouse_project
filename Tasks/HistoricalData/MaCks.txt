@@ -1,6 +1,5 @@
 AGG
 LEC
-BIG
 FDC
 API
 D11

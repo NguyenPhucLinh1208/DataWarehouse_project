@@ -12,7 +12,7 @@ WORKDIR /opt
 
 
 RUN useradd -m -d /home/datawarehouse -s /bin/bash datawarehouse && \
-    chown -R datawarehouse:datawarehouse /opt
+    chown -R datawarehouse:datawarehouse /opt /usr
 
 # Upgrade pip and install project dependencies
 COPY .devcontainer/requirements.txt /opt/.devcontainer/requirements.txt

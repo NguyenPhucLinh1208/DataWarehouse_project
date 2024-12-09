@@ -1,0 +1,140 @@
+Dữ liệu Kết Quả Kinh Doanh cho mã AGG thiếu từ các năm: 2017.
+Dữ liệu Lưu Chuyển Tiền Tệ cho mã AGG thiếu từ các năm: 2017.
+Dữ liệu Cân Đối Kế Toán cho mã AGG thiếu từ các năm: 2017.
+Mã AGG đã được xử lý
+Lỗi khi crawl dữ liệu 'Lưu Chuyển Tiền Tệ' cho mã LEC: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=131.0.6778.85); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+
+Mã LEC đã được xử lý
+Mã FDC đã được xử lý
+Mã API đã được xử lý
+Mã D11 đã được xử lý
+Đã lưu dữ liệu sau 5 mã chứng khoán.
+Mã HAR đã được xử lý
+Dữ liệu Kết Quả Kinh Doanh cho mã XDH thiếu từ các năm: 2020.
+Dữ liệu Lưu Chuyển Tiền Tệ cho mã XDH thiếu từ các năm: 2020.
+Dữ liệu Cân Đối Kế Toán cho mã XDH thiếu từ các năm: 2020.
+Mã XDH đã được xử lý
+Lỗi khi crawl dữ liệu 'Kết Quả Kinh Doanh' cho mã C21: 13 columns passed, passed data had 16 columns
+Mã C21 đã được xử lý
+Mã D2D đã được xử lý
+Dữ liệu Kết Quả Kinh Doanh cho mã CK8 thiếu từ các năm: 2024.
+Dữ liệu Lưu Chuyển Tiền Tệ cho mã CK8 thiếu từ các năm: 2024.
+Dữ liệu Cân Đối Kế Toán cho mã CK8 thiếu từ các năm: 2024.
+Mã CK8 đã được xử lý
+Đã lưu dữ liệu sau 10 mã chứng khoán.
+Dữ liệu Lưu Chuyển Tiền Tệ cho mã AAV thiếu từ các năm: 2024.
+Mã AAV đã được xử lý
+Mã CLG đã được xử lý
+Dữ liệu Kết Quả Kinh Doanh cho mã MGR thiếu từ các năm: 2020.
+Dữ liệu Lưu Chuyển Tiền Tệ cho mã MGR thiếu từ các năm: 2020.
+Dữ liệu Cân Đối Kế Toán cho mã MGR thiếu từ các năm: 2020.
+Mã MGR đã được xử lý
+Lỗi khi crawl dữ liệu 'Kết Quả Kinh Doanh' cho mã HPI: 13 columns passed, passed data had 11 columns
+Lỗi khi crawl dữ liệu 'Lưu Chuyển Tiền Tệ' cho mã HPI: 13 columns passed, passed data had 16 columns
+Mã HPI đã được xử lý
+Mã DRH đã được xử lý
+Đã lưu dữ liệu sau 15 mã chứng khoán.
+Mã FIR đã được xử lý
+Dữ liệu Kết Quả Kinh Doanh cho mã BCM thiếu từ các năm: 2017.
+Dữ liệu Lưu Chuyển Tiền Tệ cho mã BCM thiếu từ các năm: 2017.
+Dữ liệu Cân Đối Kế Toán cho mã BCM thiếu từ các năm: 2017.
+Mã BCM đã được xử lý
+Mã CCL đã được xử lý
+Dữ liệu Kết Quả Kinh Doanh cho mã BVL thiếu từ các năm: 2020.
+Dữ liệu Lưu Chuyển Tiền Tệ cho mã BVL thiếu từ các năm: 2020.
+Dữ liệu Cân Đối Kế Toán cho mã BVL thiếu từ các năm: 2020.
+Mã BVL đã được xử lý
+Lỗi khi crawl dữ liệu 'Kết Quả Kinh Doanh' cho mã HQC: 15 columns passed, passed data had 16 columns
+Mã HQC đã được xử lý
+Đã lưu dữ liệu sau 20 mã chứng khoán.
+Mã DXG đã được xử lý
+Mã BII đã được xử lý
+Mã FLC đã được xử lý
+Mã TCH đã được xử lý
+Dữ liệu Kết Quả Kinh Doanh cho mã HU6 thiếu từ các năm: 2024.
+Dữ liệu Lưu Chuyển Tiền Tệ cho mã HU6 thiếu từ các năm: 2024.
+Dữ liệu Cân Đối Kế Toán cho mã HU6 thiếu từ các năm: 2024.
+Mã HU6 đã được xử lý
+Đã lưu dữ liệu sau 25 mã chứng khoán.
+Dữ liệu Kết Quả Kinh Doanh cho mã HTN thiếu từ các năm: 2024.
+Dữ liệu Lưu Chuyển Tiền Tệ cho mã HTN thiếu từ các năm: 2024.
+Dữ liệu Cân Đối Kế Toán cho mã HTN thiếu từ các năm: 2017.
+Mã HTN đã được xử lý
+Dữ liệu Kết Quả Kinh Doanh cho mã DXS thiếu từ các năm: 2020.
+Dữ liệu Lưu Chuyển Tiền Tệ cho mã DXS thiếu từ các năm: 2020.
+Dữ liệu Cân Đối Kế Toán cho mã DXS thiếu từ các năm: 2020.
+Mã DXS đã được xử lý
+Lỗi khi crawl dữ liệu 'Lưu Chuyển Tiền Tệ' cho mã DIG: 15 columns passed, passed data had 16 columns
+Mã DIG đã được xử lý
+Dữ liệu Kết Quả Kinh Doanh cho mã SSH thiếu từ các năm: 2020.
+Dữ liệu Lưu Chuyển Tiền Tệ cho mã SSH thiếu từ các năm: 2020.
+Dữ liệu Cân Đối Kế Toán cho mã SSH thiếu từ các năm: 2020.
+Mã SSH đã được xử lý
+Lỗi khi crawl dữ liệu 'Kết Quả Kinh Doanh' cho mã IDJ: 15 columns passed, passed data had 16 columns
+Lỗi khi crawl dữ liệu 'Lưu Chuyển Tiền Tệ' cho mã IDJ: 15 columns passed, passed data had 16 columns
+Mã IDJ đã được xử lý
+Đã lưu dữ liệu sau 30 mã chứng khoán.
+Dữ liệu Kết Quả Kinh Doanh cho mã DCH thiếu từ các năm: 2024.
+Dữ liệu Lưu Chuyển Tiền Tệ cho mã DCH thiếu từ các năm: 2024.
+Mã DCH đã được xử lý
+Dữ liệu Kết Quả Kinh Doanh cho mã AMD thiếu từ các năm: 2024.
+Mã AMD đã được xử lý
+Mã MH3 đã được xử lý
+Mã CEO đã được xử lý
+Mã IJC đã được xử lý
+Đã lưu dữ liệu sau 35 mã chứng khoán.
+Mã HDC đã được xử lý
+Mã HDG đã được xử lý
+Mã KAC đã được xử lý
+Mã CRE đã được xử lý
+Mã KDH đã được xử lý
+Đã lưu dữ liệu sau 40 mã chứng khoán.
+Dữ liệu Kết Quả Kinh Doanh cho mã HD8 thiếu từ các năm: 2024.
+Dữ liệu Lưu Chuyển Tiền Tệ cho mã HD8 thiếu từ các năm: 2024.
+Dữ liệu Cân Đối Kế Toán cho mã HD8 thiếu từ các năm: 2024.
+Mã HD8 đã được xử lý
+Dữ liệu Kết Quả Kinh Doanh cho mã KHG thiếu từ các năm: 2020.
+Dữ liệu Lưu Chuyển Tiền Tệ cho mã KHG thiếu từ các năm: 2020.
+Dữ liệu Cân Đối Kế Toán cho mã KHG thiếu từ các năm: 2020.
+Mã KHG đã được xử lý
+Mã LSG đã được xử lý
+Mã KOS đã được xử lý
+Mã LHG đã được xử lý
+Đã lưu dữ liệu sau 45 mã chứng khoán.
+Mã ITC đã được xử lý
+Mã KBC đã được xử lý
+Dữ liệu Lưu Chuyển Tiền Tệ cho mã MA1 thiếu từ các năm: 2024.
+Dữ liệu Cân Đối Kế Toán cho mã MA1 thiếu từ các năm: 2024.
+Mã MA1 đã được xử lý
+Dữ liệu Lưu Chuyển Tiền Tệ cho mã ITA thiếu từ các năm: 2024.
+Mã ITA đã được xử lý
+Dữ liệu Lưu Chuyển Tiền Tệ cho mã HD6 thiếu từ các năm: 2020.
+Dữ liệu Cân Đối Kế Toán cho mã HD6 thiếu từ các năm: 2017.
+Mã HD6 đã được xử lý
+Đã lưu dữ liệu sau 50 mã chứng khoán.
+Lỗi khi crawl dữ liệu 'Lưu Chuyển Tiền Tệ' cho mã DTA: 15 columns passed, passed data had 16 columns
+Mã DTA đã được xử lý
+Mã CKG đã được xử lý
+Dữ liệu Kết Quả Kinh Doanh cho mã HPX thiếu từ các năm: 2017.
+Dữ liệu Lưu Chuyển Tiền Tệ cho mã HPX thiếu từ các năm: 2017.
+Dữ liệu Cân Đối Kế Toán cho mã HPX thiếu từ các năm: 2017.
+Mã HPX đã được xử lý
+Lỗi khi crawl dữ liệu 'Kết Quả Kinh Doanh' cho mã LGL: 11 columns passed, passed data had 15 columns
+Lỗi khi crawl dữ liệu 'Lưu Chuyển Tiền Tệ' cho mã LGL: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=131.0.6778.85); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Mã LGL đã được xử lý
+Mã FID đã được xử lý
+Đã lưu dữ liệu sau 55 mã chứng khoán.
+Mã NBB đã được xử lý
+Mã NDN đã được xử lý
+Mã NRC đã được xử lý
+Mã NLG đã được xử lý
+Mã EFI đã được xử lý
+Đã lưu dữ liệu sau 60 mã chứng khoán.
+Mã NTB đã được xử lý
+Mã NTL đã được xử lý
+Mã NVT đã được xử lý
+Mã NTC đã được xử lý
+Mã PIV đã được xử lý
+Đã lưu dữ liệu sau 65 mã chứng khoán.

@@ -16,3 +16,15 @@ tôi xây dựng trong devcontainer, sẽ dùng container chính là data wareho
 * Sau đó, crawl dữ liệu từ SSI về hồ sơ công ty.
 * thực hiện crawl trong 127 mã, lấy thông tin cơ bản và thông tin niêm yét
 
+## b. Báo cáo tài chính
+
+* sử dụng crawl từ ssi, lý do là dữ liệu ở đây rất đầy đủ, có tính mới nhất và chính xác nhất.
+* sử dụng selenium
+* tạo 2 container là 2 trình duyệt
+* sử dụng 2 tài khoản
+* thực hiện crawl song song để giảm 1 nửa thời gian
+
+## c. Lịch sử giá
+
+* sử dụng vnstock: sử dụng bởi lượng dữ liệu quá lớn, trực tiếp crawl sẽ tốn rất nhiều thời gian
+

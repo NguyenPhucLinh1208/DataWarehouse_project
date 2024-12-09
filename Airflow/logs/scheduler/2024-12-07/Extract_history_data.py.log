@@ -7839,3 +7839,81 @@ sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not translate
 [2024-12-07T10:01:23.850+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:01:23.849+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2024-12-07T10:01:23.900+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:01:23.900+0000] {dag.py:4180} INFO - Setting next_dagrun for parallel_financial_reports to None, run_after=None
 [2024-12-07T10:01:23.971+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Extract_history_data.py took 1.715 seconds
+[2024-12-07T10:26:43.349+0000] {processor.py:186} INFO - Started process (PID=200) to work on /opt/airflow/dags/Extract_history_data.py
+[2024-12-07T10:26:43.351+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Extract_history_data.py for tasks to queue
+[2024-12-07T10:26:43.358+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:26:43.356+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Extract_history_data.py
+[2024-12-07T10:26:45.295+0000] {processor.py:925} INFO - DAG(s) 'parallel_historycal_financial_reports' retrieved from /opt/airflow/dags/Extract_history_data.py
+[2024-12-07T10:26:45.647+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:26:45.646+0000] {override.py:1911} INFO - Created Permission View: can read on DAG:parallel_historycal_financial_reports
+[2024-12-07T10:26:45.691+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:26:45.690+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG:parallel_historycal_financial_reports
+[2024-12-07T10:26:45.724+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:26:45.723+0000] {override.py:1911} INFO - Created Permission View: can edit on DAG:parallel_historycal_financial_reports
+[2024-12-07T10:26:45.754+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:26:45.754+0000] {override.py:1911} INFO - Created Permission View: can read on DAG Run:parallel_historycal_financial_reports
+[2024-12-07T10:26:45.781+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:26:45.781+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG Run:parallel_historycal_financial_reports
+[2024-12-07T10:26:45.807+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:26:45.807+0000] {override.py:1911} INFO - Created Permission View: can create on DAG Run:parallel_historycal_financial_reports
+[2024-12-07T10:26:45.834+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:26:45.833+0000] {override.py:1911} INFO - Created Permission View: menu access on DAG Run:parallel_historycal_financial_reports
+[2024-12-07T10:26:45.835+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:26:45.835+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-07T10:26:45.870+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:26:45.869+0000] {dag.py:3262} INFO - Creating ORM DAG for parallel_historycal_financial_reports
+[2024-12-07T10:26:45.871+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:26:45.871+0000] {dag.py:4180} INFO - Setting next_dagrun for parallel_historycal_financial_reports to None, run_after=None
+[2024-12-07T10:26:45.942+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Extract_history_data.py took 2.627 seconds
+[2024-12-07T10:27:16.156+0000] {processor.py:186} INFO - Started process (PID=219) to work on /opt/airflow/dags/Extract_history_data.py
+[2024-12-07T10:27:16.162+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Extract_history_data.py for tasks to queue
+[2024-12-07T10:27:16.177+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:27:16.175+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Extract_history_data.py
+[2024-12-07T10:27:17.386+0000] {processor.py:925} INFO - DAG(s) 'parallel_historycal_financial_reports' retrieved from /opt/airflow/dags/Extract_history_data.py
+[2024-12-07T10:27:17.554+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:27:17.554+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-07T10:27:17.645+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:27:17.644+0000] {dag.py:4180} INFO - Setting next_dagrun for parallel_historycal_financial_reports to None, run_after=None
+[2024-12-07T10:27:17.705+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Extract_history_data.py took 1.621 seconds
+[2024-12-07T10:27:48.281+0000] {processor.py:186} INFO - Started process (PID=231) to work on /opt/airflow/dags/Extract_history_data.py
+[2024-12-07T10:27:48.283+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Extract_history_data.py for tasks to queue
+[2024-12-07T10:27:48.285+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:27:48.285+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Extract_history_data.py
+[2024-12-07T10:27:48.831+0000] {processor.py:925} INFO - DAG(s) 'parallel_historycal_financial_reports' retrieved from /opt/airflow/dags/Extract_history_data.py
+[2024-12-07T10:27:48.895+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:27:48.894+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-07T10:27:48.913+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:27:48.913+0000] {dag.py:4180} INFO - Setting next_dagrun for parallel_historycal_financial_reports to None, run_after=None
+[2024-12-07T10:27:48.951+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Extract_history_data.py took 0.681 seconds
+[2024-12-07T10:28:19.221+0000] {processor.py:186} INFO - Started process (PID=243) to work on /opt/airflow/dags/Extract_history_data.py
+[2024-12-07T10:28:19.223+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Extract_history_data.py for tasks to queue
+[2024-12-07T10:28:19.224+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:28:19.224+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Extract_history_data.py
+[2024-12-07T10:28:19.634+0000] {processor.py:925} INFO - DAG(s) 'parallel_historycal_financial_reports' retrieved from /opt/airflow/dags/Extract_history_data.py
+[2024-12-07T10:28:19.701+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:28:19.701+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-07T10:28:19.761+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:28:19.760+0000] {dag.py:4180} INFO - Setting next_dagrun for parallel_historycal_financial_reports to None, run_after=None
+[2024-12-07T10:28:19.807+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Extract_history_data.py took 0.592 seconds
+[2024-12-07T10:28:50.279+0000] {processor.py:186} INFO - Started process (PID=255) to work on /opt/airflow/dags/Extract_history_data.py
+[2024-12-07T10:28:50.281+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Extract_history_data.py for tasks to queue
+[2024-12-07T10:28:50.283+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:28:50.282+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Extract_history_data.py
+[2024-12-07T10:28:50.931+0000] {processor.py:925} INFO - DAG(s) 'parallel_historycal_financial_reports' retrieved from /opt/airflow/dags/Extract_history_data.py
+[2024-12-07T10:28:50.996+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:28:50.995+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-07T10:28:51.035+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:28:51.034+0000] {dag.py:4180} INFO - Setting next_dagrun for parallel_historycal_financial_reports to None, run_after=None
+[2024-12-07T10:28:51.106+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Extract_history_data.py took 0.835 seconds
+[2024-12-07T10:29:21.835+0000] {processor.py:186} INFO - Started process (PID=267) to work on /opt/airflow/dags/Extract_history_data.py
+[2024-12-07T10:29:21.836+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Extract_history_data.py for tasks to queue
+[2024-12-07T10:29:21.838+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:29:21.838+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Extract_history_data.py
+[2024-12-07T10:29:22.871+0000] {processor.py:925} INFO - DAG(s) 'parallel_historycal_financial_reports' retrieved from /opt/airflow/dags/Extract_history_data.py
+[2024-12-07T10:29:23.019+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:29:23.018+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-07T10:29:23.089+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:29:23.088+0000] {dag.py:4180} INFO - Setting next_dagrun for parallel_historycal_financial_reports to None, run_after=None
+[2024-12-07T10:29:23.157+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Extract_history_data.py took 1.330 seconds
+[2024-12-07T10:29:53.558+0000] {processor.py:186} INFO - Started process (PID=279) to work on /opt/airflow/dags/Extract_history_data.py
+[2024-12-07T10:29:53.562+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Extract_history_data.py for tasks to queue
+[2024-12-07T10:29:53.563+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:29:53.563+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Extract_history_data.py
+[2024-12-07T10:29:54.208+0000] {processor.py:925} INFO - DAG(s) 'parallel_historycal_financial_reports' retrieved from /opt/airflow/dags/Extract_history_data.py
+[2024-12-07T10:29:54.277+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:29:54.277+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-07T10:29:54.359+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:29:54.359+0000] {dag.py:4180} INFO - Setting next_dagrun for parallel_historycal_financial_reports to None, run_after=None
+[2024-12-07T10:29:54.406+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Extract_history_data.py took 0.857 seconds
+[2024-12-07T10:30:25.063+0000] {processor.py:186} INFO - Started process (PID=291) to work on /opt/airflow/dags/Extract_history_data.py
+[2024-12-07T10:30:25.064+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Extract_history_data.py for tasks to queue
+[2024-12-07T10:30:25.065+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:30:25.065+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Extract_history_data.py
+[2024-12-07T10:30:25.486+0000] {processor.py:925} INFO - DAG(s) 'parallel_historycal_financial_reports' retrieved from /opt/airflow/dags/Extract_history_data.py
+[2024-12-07T10:30:25.539+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:30:25.538+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-07T10:30:25.556+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:30:25.556+0000] {dag.py:4180} INFO - Setting next_dagrun for parallel_historycal_financial_reports to None, run_after=None
+[2024-12-07T10:30:25.596+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Extract_history_data.py took 0.540 seconds
+[2024-12-07T10:30:55.731+0000] {processor.py:186} INFO - Started process (PID=304) to work on /opt/airflow/dags/Extract_history_data.py
+[2024-12-07T10:30:55.733+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Extract_history_data.py for tasks to queue
+[2024-12-07T10:30:55.734+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:30:55.734+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Extract_history_data.py
+[2024-12-07T10:30:56.053+0000] {processor.py:925} INFO - DAG(s) 'parallel_historycal_financial_reports' retrieved from /opt/airflow/dags/Extract_history_data.py
+[2024-12-07T10:30:56.124+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:30:56.124+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-07T10:30:56.142+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:30:56.142+0000] {dag.py:4180} INFO - Setting next_dagrun for parallel_historycal_financial_reports to None, run_after=None
+[2024-12-07T10:30:56.184+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Extract_history_data.py took 0.466 seconds
+[2024-12-07T10:31:26.608+0000] {processor.py:186} INFO - Started process (PID=316) to work on /opt/airflow/dags/Extract_history_data.py
+[2024-12-07T10:31:26.609+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Extract_history_data.py for tasks to queue
+[2024-12-07T10:31:26.611+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:31:26.611+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Extract_history_data.py
+[2024-12-07T10:31:27.519+0000] {processor.py:925} INFO - DAG(s) 'parallel_historycal_financial_reports' retrieved from /opt/airflow/dags/Extract_history_data.py
+[2024-12-07T10:31:27.617+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:31:27.617+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-07T10:31:27.650+0000] {logging_mixin.py:190} INFO - [2024-12-07T10:31:27.650+0000] {dag.py:4180} INFO - Setting next_dagrun for parallel_historycal_financial_reports to None, run_after=None
+[2024-12-07T10:31:27.711+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Extract_history_data.py took 1.121 seconds

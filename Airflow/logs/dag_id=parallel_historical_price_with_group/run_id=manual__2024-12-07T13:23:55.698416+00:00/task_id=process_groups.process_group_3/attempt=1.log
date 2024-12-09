@@ -1,0 +1,43 @@
+[2024-12-07T13:23:59.887+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-07T13:24:00.016+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: parallel_historical_price_with_group.process_groups.process_group_3 manual__2024-12-07T13:23:55.698416+00:00 [queued]>
+[2024-12-07T13:24:00.045+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: parallel_historical_price_with_group.process_groups.process_group_3 manual__2024-12-07T13:23:55.698416+00:00 [queued]>
+[2024-12-07T13:24:00.045+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-12-07T13:24:00.082+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): process_groups.process_group_3> on 2024-12-07 13:23:55.698416+00:00
+[2024-12-07T13:24:00.119+0000] {logging_mixin.py:190} WARNING - /usr/local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=5755) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-12-07T13:24:00.115+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'parallel_historical_price_with_group', 'process_groups.process_group_3', 'manual__2024-12-07T13:23:55.698416+00:00', '--job-id', '62', '--raw', '--subdir', 'DAGS_FOLDER/Extract_history_price_data.py', '--cfg-path', '/tmp/tmp_8k2mt81']
+[2024-12-07T13:24:00.121+0000] {standard_task_runner.py:105} INFO - Job 62: Subtask process_groups.process_group_3
+[2024-12-07T13:24:00.121+0000] {standard_task_runner.py:72} INFO - Started process 5775 to run task
+[2024-12-07T13:24:00.345+0000] {task_command.py:467} INFO - Running <TaskInstance: parallel_historical_price_with_group.process_groups.process_group_3 manual__2024-12-07T13:23:55.698416+00:00 [running]> on host 5690cb444f4e
+[2024-12-07T13:24:00.567+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflowDWH' AIRFLOW_CTX_DAG_ID='parallel_historical_price_with_group' AIRFLOW_CTX_TASK_ID='process_groups.process_group_3' AIRFLOW_CTX_EXECUTION_DATE='2024-12-07T13:23:55.698416+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-07T13:23:55.698416+00:00'
+[2024-12-07T13:24:00.570+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-07T13:24:05.790+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-07T13:24:08.185+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-07T13:24:09.907+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-07T13:24:12.244+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-07T13:24:15.009+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-07T13:24:16.226+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-07T13:24:17.836+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-07T13:24:20.102+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-07T13:24:21.156+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-07T13:24:22.271+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-07T13:24:24.286+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-07T13:24:25.314+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-07T13:24:26.500+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-07T13:24:27.957+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-07T13:24:28.922+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-07T13:24:30.075+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-07T13:24:31.380+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-07T13:24:32.379+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-07T13:24:33.420+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-07T13:24:34.443+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-07T13:24:36.100+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-07T13:24:53.228+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-07T13:24:55.471+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-07T13:24:56.635+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-07T13:24:57.629+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-07T13:24:58.417+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-07T13:24:58.887+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-12-07T13:24:58.960+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-07T13:24:58.961+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=parallel_historical_price_with_group, task_id=process_groups.process_group_3, run_id=manual__2024-12-07T13:23:55.698416+00:00, execution_date=20241207T132355, start_date=20241207T132400, end_date=20241207T132458
+[2024-12-07T13:24:59.042+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-07T13:24:59.087+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
