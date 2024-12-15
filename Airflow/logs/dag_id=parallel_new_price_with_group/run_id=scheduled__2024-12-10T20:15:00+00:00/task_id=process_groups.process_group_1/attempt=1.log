@@ -1,0 +1,51 @@
+[2024-12-12T13:15:33.770+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-12T13:15:34.437+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: parallel_new_price_with_group.process_groups.process_group_1 scheduled__2024-12-10T20:15:00+00:00 [queued]>
+[2024-12-12T13:15:34.681+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: parallel_new_price_with_group.process_groups.process_group_1 scheduled__2024-12-10T20:15:00+00:00 [queued]>
+[2024-12-12T13:15:34.686+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-12-12T13:15:35.828+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): process_groups.process_group_1> on 2024-12-10 20:15:00+00:00
+[2024-12-12T13:15:36.082+0000] {logging_mixin.py:190} WARNING - /usr/local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=205) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-12-12T13:15:36.213+0000] {standard_task_runner.py:72} INFO - Started process 257 to run task
+[2024-12-12T13:15:36.163+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'parallel_new_price_with_group', 'process_groups.process_group_1', 'scheduled__2024-12-10T20:15:00+00:00', '--job-id', '312', '--raw', '--subdir', 'DAGS_FOLDER/Extract_new_price_data.py', '--cfg-path', '/tmp/tmpv2qo0oa2']
+[2024-12-12T13:15:36.609+0000] {standard_task_runner.py:105} INFO - Job 312: Subtask process_groups.process_group_1
+[2024-12-12T13:15:41.605+0000] {task_command.py:467} INFO - Running <TaskInstance: parallel_new_price_with_group.process_groups.process_group_1 scheduled__2024-12-10T20:15:00+00:00 [running]> on host f1b774b5d57f
+[2024-12-12T13:15:43.001+0000] {job.py:229} INFO - Heartbeat recovered after 10.76 seconds
+[2024-12-12T13:15:45.584+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflowDWH' AIRFLOW_CTX_DAG_ID='parallel_new_price_with_group' AIRFLOW_CTX_TASK_ID='process_groups.process_group_1' AIRFLOW_CTX_EXECUTION_DATE='2024-12-10T20:15:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-12-10T20:15:00+00:00'
+[2024-12-12T13:15:45.617+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-12T13:16:42.610+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-12T13:16:44.596+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-12T13:16:45.699+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-12T13:16:46.892+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-12T13:16:48.922+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-12T13:16:49.993+0000] {logging_mixin.py:190} INFO - Mã cổ phiếu DCH hiện bị dừng giao dịch
+[2024-12-12T13:16:51.634+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-12T13:16:52.186+0000] {logging_mixin.py:190} INFO - Mã cổ phiếu AMD hiện bị dừng giao dịch
+[2024-12-12T13:16:53.267+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-12T13:16:54.522+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-12T13:16:55.716+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-12T13:16:58.030+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-12T13:16:59.929+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-12T13:17:01.118+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-12T13:17:01.423+0000] {logging_mixin.py:190} INFO - Mã cổ phiếu KAC hiện bị dừng giao dịch
+[2024-12-12T13:17:02.860+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-12T13:17:05.851+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-12T13:17:08.655+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-12T13:17:09.111+0000] {logging_mixin.py:190} INFO - Mã cổ phiếu HD8 hiện bị dừng giao dịch
+[2024-12-12T13:17:10.439+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-12T13:17:14.612+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-12T13:17:19.607+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-12T13:17:25.468+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-12T13:17:29.772+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-12T13:17:34.881+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-12T13:17:36.801+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-12T13:17:39.848+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-12T13:17:40.375+0000] {logging_mixin.py:190} INFO - Mã cổ phiếu ITA hiện bị dừng giao dịch
+[2024-12-12T13:17:41.945+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-12T13:17:44.302+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-12T13:17:47.702+0000] {data_explorer.py:64} WARNING - Thông tin niêm yết & giao dịch sẽ được truy xuất từ TCBS
+[2024-12-12T13:17:51.640+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-12-12T13:17:54.634+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-12T13:17:54.707+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=parallel_new_price_with_group, task_id=process_groups.process_group_1, run_id=scheduled__2024-12-10T20:15:00+00:00, execution_date=20241210T201500, start_date=20241212T131534, end_date=20241212T131754
+[2024-12-12T13:17:56.367+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-12T13:17:59.208+0000] {standard_task_runner.py:217} INFO - Process not found (most likely exited), stop collecting metrics
+[2024-12-12T13:17:59.521+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-12T13:17:59.569+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

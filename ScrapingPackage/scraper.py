@@ -1,4 +1,5 @@
 import time
+from datetime import datetime
 import pandas as pd
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -130,11 +131,78 @@ def get_total_financial_data(driver, report_type, stock_code):
     return Total_report
 
 
+def scrape_new_data_report(driver, report_type):
+    """
+    Hàm thực hiện crawl data trên 1 trang giao diện, tại một thời điểm.
+    """
+    total_col_names, row_datas = [], []
 
-def get_new_financial_data(driver, report_type, stock_code, year):
+    # Lấy ngày hiện tại
+    current_date = datetime.now()
 
-    new_report_data = pd.DataFrame()
+    # Xác định quý hiện tại
+    if 1 <= current_date.month <= 3:
+        latest_report_quarter = f"Q4 {current_date.year - 1}"
+    elif 4 <= current_date.month <= 6:
+        latest_report_quarter = f"Q1 {current_date.year}"
+    elif 7 <= current_date.month <= 9:
+        latest_report_quarter = f"Q2 {current_date.year}"
+    else:
+        latest_report_quarter = f"Q3 {current_date.year}"
+
+    # Lấy giá trị tên cột, được đánh dấu trong thẻ thead
+    WebDriverWait(driver, 45, poll_frequency=0.1).until(EC.presence_of_element_located((By.XPATH, "//thead")))
+    # lấy phần tử span trong thẻ thead
+    col_names = driver.find_elements(By.XPATH, "//thead//tr//th//span")
+    # Lấy tên cột, loại bỏ khoảng trống
+    total_col_names = [col.text.strip() for col in col_names if col.text.strip()]  
+    # Không có dữ liệu, return
+    if not total_col_names:
+        print("Lỗi khi tải trang hoặc không có dữ liệu")
+        return pd.DataFrame()
+
+    # Nếu có dữ liệu, nhưng nó không phải là dữ liệu mới nhất
+    if total_col_names[1] != latest_report_quarter:
+        print("Dữ liệu mới nhất chưa được cập nhật")
+        return pd.DataFrame()
+
+    # Tiến hành crawl các hàng, nằm trong thẻ tbody
+    rows_xpath = "//tbody//tr"
+    if report_type == "Cân Đối Kế Toán":
+        rows = WebDriverWait(driver, 30, poll_frequency=0.1).until(EC.presence_of_all_elements_located((By.XPATH, rows_xpath)))[1:]
+    else:
+        rows = WebDriverWait(driver, 30, poll_frequency=0.1).until(EC.presence_of_all_elements_located((By.XPATH, rows_xpath)))
+
+    row_datas = [
+        [value.text.strip() for value in row.find_elements(By.XPATH, ".//td") if value.text.strip()]
+        for row in rows if row.text.strip()
+    ]
+
+    Table = pd.DataFrame(row_datas, columns=total_col_names)
+    Table_long = pd.melt(Table, id_vars=["CHỈ TIÊU"], var_name="THỜI GIAN", value_name="GIÁ TRỊ")
+    return Table_long
+
+
+def get_total_financial_new_data(driver, report_type, stock_code):
+    """
+    Lấy dữ liệu tài chính cho một hoặc nhiều loại báo cáo.
+    """
+    Total_report = pd.DataFrame()
+
+    # Chọn báo cáo theo loại
     select_option_Xpath(driver, f"//li[@class='nav-item m-tabs__item']//a[.//span[text()='{report_type}']]")
-    WebDriverWait(driver, 10, poll_frequency=0.1).until(EC.invisibility_of_element_located((By.CSS_SELECTOR, "div.loading-spinner")))
-    new_report_data = get_financial_data(driver, stock_code, year)
-    return new_report_data
+    WebDriverWait(driver, 30, poll_frequency=0.1).until(EC.invisibility_of_element_located((By.CSS_SELECTOR, "div.loading-spinner")))
+
+    # Scrape dữ liệu báo cáo
+    df_financial_data = scrape_new_data_report(driver, report_type)
+    
+    # Kiểm tra số hàng của df_financial_data
+    if df_financial_data.empty:
+        return stock_code
+    
+    # Nếu có dữ liệu hợp lệ, gán mã chứng khoán và thêm vào DataFrame
+    df_financial_data["Mã Chứng Khoán"] = stock_code
+    Total_report = pd.concat([Total_report, df_financial_data], ignore_index=True)
+
+    return Total_report
+

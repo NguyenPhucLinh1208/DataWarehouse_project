@@ -9,10 +9,10 @@ from airflow.operators.empty import EmptyOperator
 from datetime import datetime
 import pandas as pd
 
-from Tasks.HistoricalData.Historical_price_stock import historical_price
-from Tasks.HistoricalData.load_to_staging import load_csv_to_db_using_copy
+from Tasks.extract.HistoricalData.Historical_price_stock import historical_price
+from Tasks.Load_data.load_data_to_staging import load_csv_to_db_using_copy
 
-with open("/opt/Tasks/HistoricalData/MaCks.txt", "r") as f:
+with open("/opt/Tasks/extract/HistoricalData/MaCks.txt", "r") as f:
     MaCks = [line.strip() for line in f]
 
 def split_list(lst, n):
@@ -25,15 +25,15 @@ list_of_lists = list(split_list(MaCks, 26))
 
 def process_group(stock_codes, group_id):
     result = historical_price(stock_codes)
-    output_path = f"/opt/Tasks/HistoricalData/Temp_HisPrice_Group_{group_id}.csv"
+    output_path = f"/opt/Tasks/extract/HistoricalData/Temp_HisPrice_Group_{group_id}.csv"
     result.to_csv(output_path, index=False)
 
 # Hàm gộp các file CSV tạm thời
 def combine_csv_files():
     """Gộp các file CSV tạm thời thành một file duy nhất."""
-    temp_files = [f"/opt/Tasks/HistoricalData/Temp_HisPrice_Group_{i}.csv" for i in range(len(list_of_lists))]
+    temp_files = [f"/opt/Tasks/extract/HistoricalData/Temp_HisPrice_Group_{i}.csv" for i in range(len(list_of_lists))]
     combined_df = pd.concat([pd.read_csv(f) for f in temp_files], ignore_index=True)
-    combined_df.to_csv("/opt/Tasks/HistoricalData/TotalHisPrice.csv", index=False)
+    combined_df.to_csv("/opt/Tasks/extract/HistoricalData/TotalHisPrice.csv", index=False)
     # Xóa các file tạm
     for temp_file in temp_files:
         try:
@@ -77,9 +77,9 @@ with DAG(
         task_id = "load_history_price_to_db",
         python_callable=load_csv_to_db_using_copy,
         op_args=[
-            "/opt/Tasks/HistoricalData/TotalHisPrice.csv",
+            "/opt/Tasks/extract/HistoricalData/TotalHisPrice.csv",
              "lichsugia",
-              ["Thoi_Gian", "Gia_Opening", "Gia_High", "Gia_Low", "Gia_Closing", "Khoi_Luong", "Ma_SIC"],
+              ["Thoi_Gian", "Gia_Opening", "Gia_High", "Gia_Low", "Gia_Closing", "Khoi_Luong", "Ma_SIC", "Status"],
         ]
     )
 

@@ -7,7 +7,7 @@ CREATE TABLE HoSoCongTy (
     Von_Dieu_LE TEXT,  -- Sử dụng TEXT để lưu giữ giá trị với đơn vị
     So_Luong_Nhan_Vien TEXT,
     So_Luong_Chi_Nhanh INTEGER,
-    Ngay_Niem_Yet DATE,
+    Ngay_Niem_Yet TEXT,
     Noi_Niem_Yet TEXT,
     Gia_Chao_San TEXT,
     KL_Dang_Niem_Yet TEXT,  -- Sử dụng TEXT để lưu giữ dữ liệu có đơn vị
@@ -22,28 +22,32 @@ CREATE TABLE LichSuGia (
     Gia_Low TEXT,
     Gia_Closing TEXT,
     Khoi_Luong INTEGER,
-    Ma_SIC TEXT
+    Ma_SIC TEXT,
+    Status VARCHAR(10)
 );
 
 CREATE TABLE CanDoiKeToan (
     Chi_Tieu TEXT,
     Thoi_Gian TEXT,
     Gia_Tri TEXT,  -- Sử dụng TEXT vì giá trị có thể có đơn vị
-    Ma_SIC TEXT
+    Ma_SIC TEXT,
+    Status VARCHAR(10)
 );
 
 CREATE TABLE KetQuaKinhDoanh (
     Chi_Tieu TEXT,
     Thoi_Gian TEXT,
     Gia_Tri TEXT,  -- Sử dụng TEXT để lưu giá trị có đơn vị
-    Ma_SIC TEXT
+    Ma_SIC TEXT,
+    Status VARCHAR(10)
 );
 
 CREATE TABLE LuuChuyenTienTe (
     Chi_Tieu TEXT,
     Thoi_Gian TEXT,
     Gia_Tri TEXT,  -- Sử dụng TEXT để lưu giá trị có đơn vị
-    Ma_SIC TEXT
+    Ma_SIC TEXT,
+    Status VARCHAR(10)
 );
 
 CREATE TABLE KetQuaGiaoDich (

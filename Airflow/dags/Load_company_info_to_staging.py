@@ -6,8 +6,8 @@ from airflow.operators.python import PythonOperator
 from datetime import datetime
 from airflow.operators.empty import EmptyOperator
 
-from Tasks.HistoricalData.load_to_staging import load_csv_to_db_using_copy
-
+from Tasks.Load_data.load_data_to_staging import load_csv_to_db_using_copy
+from Tasks.transform_and_load_data.transform_and_load import hosocongty_transform_and_load
 default_args = {
     'owner': 'airflowDWH',
     'start_date': datetime(2024, 12, 6),
@@ -28,13 +28,17 @@ with DAG(
         task_id = "load_company_info_to_db",
         python_callable=load_csv_to_db_using_copy,
         op_args=[
-            "/opt/Tasks/HistoricalData/company_info.csv",
+            "/opt/Tasks/extract/HistoricalData/company_info.csv",
              "HoSoCongTy",
               ["Ten_Cong_Ty", "Ma_SIC", "Ten_Nganh", "Ma_Nganh_ICB", "Nam_Thanh_Lap", "Von_Dieu_LE", "So_Luong_Nhan_Vien", "So_Luong_Chi_Nhanh", "Ngay_Niem_Yet", "Noi_Niem_Yet", "Gia_Chao_San", "KL_Dang_Niem_Yet", "Thi_Gia_Von", "SLCP_Luu_Hanh"],
         ]
     )
     
+    load_to_dim_company = PythonOperator(
+        task_id = 'Staging_to_Datawarehouse',
+        python_callable=hosocongty_transform_and_load
+    )
     # Điểm kết thúc DAG
     end = EmptyOperator(task_id="end")
 
-    start >> load_to_db >> end
+    start >> load_to_db >> load_to_dim_company >> end
