@@ -26,27 +26,53 @@ def hosocongty_transform_and_load():
     staging_cursor.execute(sql_transform)
     transformed_data = staging_cursor.fetchall()
 
-    sql_insert = """
-            INSERT INTO dim_company (
-                Ten_cong_ty, Ma_SIC, Ma_ICB, Nam_thanh_lap, Von_dieu_le,
-                So_luong_nhan_vien, Ngay_niem_yet, San_niem_yet, Gia_chao_san,
-                KL_dang_niem_yet, Thi_gia_von, SLCP_luu_hanh
-            ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
-    """
-
     dwh_hook = PostgresHook(postgres_conn_id="load_to_dwh")
     dwh_conn = dwh_hook.get_conn()
     dwh_cursor = dwh_conn.cursor()
-    dwh_cursor.executemany(sql_insert, transformed_data)
+
+    for row in transformed_data:
+        # Kiểm tra xem Ma_SIC đã tồn tại trong dim_company chưa
+        check_sql = "SELECT 1 FROM dim_company WHERE Ma_SIC = %s;"
+        dwh_cursor.execute(check_sql, (row[1],))
+        exists = dwh_cursor.fetchone()
+
+        if exists:
+            # Nếu tồn tại, thực hiện UPDATE
+            update_sql = """
+                UPDATE dim_company
+                SET Ten_cong_ty = %s,
+                    Ma_ICB = %s,
+                    Nam_thanh_lap = %s,
+                    Von_dieu_le = %s,
+                    So_luong_nhan_vien = %s,
+                    Ngay_niem_yet = %s,
+                    San_niem_yet = %s,
+                    Gia_chao_san = %s,
+                    KL_dang_niem_yet = %s,
+                    Thi_gia_von = %s,
+                    SLCP_luu_hanh = %s
+                WHERE Ma_SIC = %s;
+            """
+            dwh_cursor.execute(update_sql, (row[0], row[2], row[3], row[4], row[5], row[6], row[7], row[8], row[9], row[10], row[11], row[1]))
+        else:
+            # Nếu không tồn tại, thực hiện INSERT
+            insert_sql = """
+                INSERT INTO dim_company (
+                    Ten_cong_ty, Ma_SIC, Ma_ICB, Nam_thanh_lap, Von_dieu_le,
+                    So_luong_nhan_vien, Ngay_niem_yet, San_niem_yet, Gia_chao_san,
+                    KL_dang_niem_yet, Thi_gia_von, SLCP_luu_hanh
+                ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+            """
+            dwh_cursor.execute(insert_sql, row)
+
     dwh_conn.commit()
 
-    # Đóng kết nối
     staging_cursor.close()
     staging_conn.close()
     dwh_cursor.close()
     dwh_conn.close()
 
-    print("ETL process completed successfully.")
+    print("ETL process completed successfully.")   
 
 def fact_Price_History_transform_load():
     sql_transform = """

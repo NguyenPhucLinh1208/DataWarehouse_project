@@ -1,0 +1,266 @@
+[2024-12-18T03:47:27.935+0000] {processor.py:186} INFO - Started process (PID=197) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T03:47:27.938+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T03:47:27.945+0000] {logging_mixin.py:190} INFO - [2024-12-18T03:47:27.942+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T03:47:31.513+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T03:47:31.607+0000] {logging_mixin.py:190} INFO - [2024-12-18T03:47:31.606+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T03:47:31.707+0000] {logging_mixin.py:190} INFO - [2024-12-18T03:47:31.706+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T03:47:31.760+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 3.841 seconds
+[2024-12-18T03:48:01.987+0000] {processor.py:186} INFO - Started process (PID=241) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T03:48:01.990+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T03:48:01.995+0000] {logging_mixin.py:190} INFO - [2024-12-18T03:48:01.995+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T03:48:04.411+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T03:48:04.493+0000] {logging_mixin.py:190} INFO - [2024-12-18T03:48:04.492+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T03:48:04.536+0000] {logging_mixin.py:190} INFO - [2024-12-18T03:48:04.536+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T03:48:04.581+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 2.608 seconds
+[2024-12-18T03:48:34.758+0000] {processor.py:186} INFO - Started process (PID=277) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T03:48:34.759+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T03:48:34.777+0000] {logging_mixin.py:190} INFO - [2024-12-18T03:48:34.772+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T03:48:36.893+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T03:48:36.969+0000] {logging_mixin.py:190} INFO - [2024-12-18T03:48:36.969+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T03:48:37.005+0000] {logging_mixin.py:190} INFO - [2024-12-18T03:48:37.005+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T03:48:37.053+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 2.304 seconds
+[2024-12-18T03:49:07.631+0000] {processor.py:186} INFO - Started process (PID=313) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T03:49:07.633+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T03:49:07.635+0000] {logging_mixin.py:190} INFO - [2024-12-18T03:49:07.634+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T03:49:08.883+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T03:49:08.950+0000] {logging_mixin.py:190} INFO - [2024-12-18T03:49:08.950+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T03:49:08.986+0000] {logging_mixin.py:190} INFO - [2024-12-18T03:49:08.986+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T03:49:09.023+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.399 seconds
+[2024-12-18T03:49:39.715+0000] {processor.py:186} INFO - Started process (PID=349) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T03:49:39.716+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T03:49:39.718+0000] {logging_mixin.py:190} INFO - [2024-12-18T03:49:39.718+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T03:49:41.033+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T03:49:41.092+0000] {logging_mixin.py:190} INFO - [2024-12-18T03:49:41.091+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T03:49:41.129+0000] {logging_mixin.py:190} INFO - [2024-12-18T03:49:41.129+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T03:49:41.166+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.457 seconds
+[2024-12-18T03:50:11.947+0000] {processor.py:186} INFO - Started process (PID=385) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T03:50:11.949+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T03:50:11.951+0000] {logging_mixin.py:190} INFO - [2024-12-18T03:50:11.951+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T03:50:13.140+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T03:50:13.203+0000] {logging_mixin.py:190} INFO - [2024-12-18T03:50:13.202+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T03:50:13.234+0000] {logging_mixin.py:190} INFO - [2024-12-18T03:50:13.234+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T03:50:13.274+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.334 seconds
+[2024-12-18T03:50:43.940+0000] {processor.py:186} INFO - Started process (PID=421) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T03:50:43.942+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T03:50:43.944+0000] {logging_mixin.py:190} INFO - [2024-12-18T03:50:43.944+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T03:50:45.133+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T03:50:45.192+0000] {logging_mixin.py:190} INFO - [2024-12-18T03:50:45.191+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T03:50:45.236+0000] {logging_mixin.py:190} INFO - [2024-12-18T03:50:45.236+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T03:50:45.277+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.345 seconds
+[2024-12-18T06:18:26.079+0000] {processor.py:186} INFO - Started process (PID=203) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:18:26.081+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:18:26.088+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:18:26.088+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:18:29.104+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:18:29.203+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:18:29.202+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:18:29.277+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:18:29.277+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:18:29.373+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 3.315 seconds
+[2024-12-18T06:19:00.277+0000] {processor.py:186} INFO - Started process (PID=239) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:19:00.279+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:19:00.284+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:19:00.283+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:19:02.743+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:19:02.795+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:19:02.795+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:19:02.826+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:19:02.826+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:19:02.872+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 2.607 seconds
+[2024-12-18T06:19:33.126+0000] {processor.py:186} INFO - Started process (PID=276) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:19:33.129+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:19:33.132+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:19:33.131+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:19:34.397+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:19:34.446+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:19:34.445+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:19:34.478+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:19:34.478+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:19:34.509+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.391 seconds
+[2024-12-18T06:20:04.569+0000] {processor.py:186} INFO - Started process (PID=312) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:20:04.571+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:20:04.574+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:20:04.574+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:20:05.841+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:20:05.900+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:20:05.899+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:20:05.930+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:20:05.930+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:20:05.965+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.401 seconds
+[2024-12-18T06:20:36.083+0000] {processor.py:186} INFO - Started process (PID=348) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:20:36.085+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:20:36.088+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:20:36.088+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:20:37.758+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:20:37.824+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:20:37.823+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:20:37.858+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:20:37.857+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:20:37.902+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.826 seconds
+[2024-12-18T06:21:08.273+0000] {processor.py:186} INFO - Started process (PID=384) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:21:08.276+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:21:08.278+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:21:08.278+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:21:09.533+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:21:09.598+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:21:09.597+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:21:09.631+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:21:09.631+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:21:09.672+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.404 seconds
+[2024-12-18T06:21:40.357+0000] {processor.py:186} INFO - Started process (PID=420) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:21:40.360+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:21:40.364+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:21:40.364+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:21:41.803+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:21:41.872+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:21:41.872+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:21:41.956+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:21:41.956+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:21:42.004+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.659 seconds
+[2024-12-18T06:22:12.075+0000] {processor.py:186} INFO - Started process (PID=462) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:22:12.076+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:22:12.080+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:22:12.079+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:22:13.324+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:22:13.387+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:22:13.387+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:22:13.419+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:22:13.419+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:22:13.457+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.391 seconds
+[2024-12-18T06:22:43.867+0000] {processor.py:186} INFO - Started process (PID=498) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:22:43.870+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:22:43.873+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:22:43.872+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:22:44.970+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:22:45.039+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:22:45.038+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:22:45.072+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:22:45.072+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:22:45.116+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.256 seconds
+[2024-12-18T06:23:15.306+0000] {processor.py:186} INFO - Started process (PID=534) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:23:15.308+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:23:15.311+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:23:15.311+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:23:16.490+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:23:16.608+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:23:16.607+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:23:16.655+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:23:16.654+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:23:16.704+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.403 seconds
+[2024-12-18T06:23:46.944+0000] {processor.py:186} INFO - Started process (PID=572) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:23:46.946+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:23:46.949+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:23:46.948+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:23:48.195+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:23:48.251+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:23:48.251+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:23:48.326+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:23:48.326+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:23:48.365+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.428 seconds
+[2024-12-18T06:24:18.461+0000] {processor.py:186} INFO - Started process (PID=606) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:24:18.462+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:24:18.465+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:24:18.465+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:24:19.662+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:24:19.733+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:24:19.732+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:24:19.768+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:24:19.768+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:24:19.805+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.353 seconds
+[2024-12-18T06:24:50.521+0000] {processor.py:186} INFO - Started process (PID=649) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:24:50.523+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:24:50.526+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:24:50.526+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:24:51.792+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:24:51.856+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:24:51.855+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:24:51.886+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:24:51.886+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:24:51.926+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.415 seconds
+[2024-12-18T06:25:22.156+0000] {processor.py:186} INFO - Started process (PID=687) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:25:22.158+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:25:22.160+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:25:22.159+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:25:23.358+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:25:23.431+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:25:23.431+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:25:23.471+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:25:23.471+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:25:23.510+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.359 seconds
+[2024-12-18T06:25:53.712+0000] {processor.py:186} INFO - Started process (PID=721) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:25:53.715+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:25:53.717+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:25:53.717+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:25:54.924+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:25:55.000+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:25:54.999+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:25:55.041+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:25:55.040+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:25:55.082+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.377 seconds
+[2024-12-18T06:26:25.348+0000] {processor.py:186} INFO - Started process (PID=765) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:26:25.352+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:26:25.355+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:26:25.354+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:26:26.572+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:26:26.618+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:26:26.618+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:26:26.643+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:26:26.642+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:26:26.676+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.335 seconds
+[2024-12-18T06:26:56.825+0000] {processor.py:186} INFO - Started process (PID=799) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:26:56.827+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:26:56.829+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:26:56.828+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:26:58.119+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:26:58.186+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:26:58.186+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:26:58.222+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:26:58.222+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:26:58.267+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.448 seconds
+[2024-12-18T06:27:28.524+0000] {processor.py:186} INFO - Started process (PID=835) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:27:28.526+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:27:28.528+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:27:28.528+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:27:29.866+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:27:29.917+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:27:29.917+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:27:29.945+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:27:29.945+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:27:29.984+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.465 seconds
+[2024-12-18T06:28:00.154+0000] {processor.py:186} INFO - Started process (PID=871) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:28:00.156+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:28:00.159+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:28:00.158+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:28:01.480+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:28:01.529+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:28:01.528+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:28:01.559+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:28:01.559+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:28:01.602+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.455 seconds
+[2024-12-18T06:28:31.709+0000] {processor.py:186} INFO - Started process (PID=907) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:28:31.710+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:28:31.713+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:28:31.713+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:28:33.123+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:28:33.186+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:28:33.185+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:28:33.219+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:28:33.219+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:28:33.272+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.571 seconds
+[2024-12-18T06:29:04.308+0000] {processor.py:186} INFO - Started process (PID=942) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:29:04.347+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:29:04.350+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:29:04.350+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:29:05.557+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:29:05.627+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:29:05.626+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:29:05.658+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:29:05.657+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:29:05.698+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.406 seconds
+[2024-12-18T06:29:36.233+0000] {processor.py:186} INFO - Started process (PID=978) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:29:36.235+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:29:36.239+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:29:36.239+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:29:37.328+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:29:37.368+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:29:37.368+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:29:37.394+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:29:37.393+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:29:37.422+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.196 seconds
+[2024-12-18T06:30:08.224+0000] {processor.py:186} INFO - Started process (PID=1015) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:30:08.226+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:30:08.229+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:30:08.228+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:30:09.368+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:30:09.416+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:30:09.415+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:30:09.444+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:30:09.443+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:30:09.484+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.271 seconds
+[2024-12-18T06:30:39.688+0000] {processor.py:186} INFO - Started process (PID=1054) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:30:39.690+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:30:39.692+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:30:39.692+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:30:41.440+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:30:41.494+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:30:41.494+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:30:41.521+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:30:41.521+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:30:41.553+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.872 seconds
+[2024-12-18T06:31:11.654+0000] {processor.py:186} INFO - Started process (PID=1090) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:31:11.657+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:31:11.659+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:31:11.659+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:31:12.776+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:31:12.821+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:31:12.820+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:31:12.852+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:31:12.851+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:31:12.907+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.259 seconds
+[2024-12-18T06:31:42.957+0000] {processor.py:186} INFO - Started process (PID=1126) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:31:42.959+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:31:42.961+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:31:42.961+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:31:44.924+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:31:44.964+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:31:44.964+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:31:44.992+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:31:44.992+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:31:45.043+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 2.092 seconds
+[2024-12-18T06:32:15.184+0000] {processor.py:186} INFO - Started process (PID=1166) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:32:15.186+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:32:15.189+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:32:15.189+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:32:16.248+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:32:16.308+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:32:16.308+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:32:16.334+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:32:16.334+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:32:16.363+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.186 seconds
+[2024-12-18T06:32:46.825+0000] {processor.py:186} INFO - Started process (PID=1198) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:32:46.827+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:32:46.829+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:32:46.829+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:32:48.049+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:32:48.097+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:32:48.097+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:32:48.125+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:32:48.124+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:32:48.161+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.342 seconds
+[2024-12-18T06:33:18.267+0000] {processor.py:186} INFO - Started process (PID=1234) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:33:18.269+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:33:18.272+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:33:18.271+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:33:19.808+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:33:19.915+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:33:19.915+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:33:19.947+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:33:19.947+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:33:19.979+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.720 seconds
+[2024-12-18T06:33:50.056+0000] {processor.py:186} INFO - Started process (PID=1270) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:33:50.058+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:33:50.061+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:33:50.061+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:33:51.331+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:33:51.377+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:33:51.376+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:33:51.405+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:33:51.405+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:33:51.437+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.387 seconds
+[2024-12-18T06:34:21.596+0000] {processor.py:186} INFO - Started process (PID=1306) to work on /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:34:21.598+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/company_info_etl.py for tasks to queue
+[2024-12-18T06:34:21.601+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:34:21.601+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:34:22.619+0000] {processor.py:925} INFO - DAG(s) 'load_company_info_to_dwh' retrieved from /opt/airflow/dags/company_info_etl.py
+[2024-12-18T06:34:22.667+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:34:22.667+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-18T06:34:22.694+0000] {logging_mixin.py:190} INFO - [2024-12-18T06:34:22.693+0000] {dag.py:4180} INFO - Setting next_dagrun for load_company_info_to_dwh to 2024-12-17 12:30:00+00:00, run_after=2024-12-18 12:30:00+00:00
+[2024-12-18T06:34:22.727+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/company_info_etl.py took 1.139 seconds

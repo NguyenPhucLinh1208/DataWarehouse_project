@@ -14,6 +14,11 @@ def load_csv_to_db_using_copy(csv_file_path, table_name, columns, postgres_conn_
     conn = postgres_hook.get_conn()
     cursor = conn.cursor()
 
+    if table_name == "HoSoCongTy":
+        # Xóa toàn bộ dữ liệu cũ trong bảng
+        truncate_sql = "TRUNCATE TABLE HoSoCongTy;"
+        cursor.execute(truncate_sql)
+
     # Chuyển danh sách cột thành một chuỗi
     columns_str = ', '.join(columns)
 

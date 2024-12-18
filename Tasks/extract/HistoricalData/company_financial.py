@@ -64,6 +64,9 @@ def main_report():
             print(f"Đã lưu dữ liệu sau {idx} mã chứng khoán.")
 
     # Lưu vào file sau khi hoàn thành tất cả
+    Total_Balance = Total_Balance.drop_duplicates()
+    Total_Income = Total_Income.drop_duplicates()
+    Total_CashFlow = Total_CashFlow.drop_duplicates()
     Total_Balance.to_csv("/opt/Tasks/extract/HistoricalData/Total_Balance_0.csv", index=False)
     Total_Income.to_csv("/opt/Tasks/extract/HistoricalData/Total_Income_0.csv", index=False)
     Total_CashFlow.to_csv("/opt/Tasks/extract/HistoricalData/Total_CashFlow_0.csv", index=False)

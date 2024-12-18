@@ -1,0 +1,21 @@
+[2024-12-17T12:33:12.696+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-17T12:33:12.720+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: load_company_info_to_dwh.Staging_to_Datawarehouse scheduled__2024-12-16T12:30:00+00:00 [queued]>
+[2024-12-17T12:33:12.730+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: load_company_info_to_dwh.Staging_to_Datawarehouse scheduled__2024-12-16T12:30:00+00:00 [queued]>
+[2024-12-17T12:33:12.730+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-12-17T12:33:12.744+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): Staging_to_Datawarehouse> on 2024-12-16 12:30:00+00:00
+[2024-12-17T12:33:12.754+0000] {logging_mixin.py:190} WARNING - /usr/local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=2179) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-12-17T12:33:12.754+0000] {standard_task_runner.py:72} INFO - Started process 2181 to run task
+[2024-12-17T12:33:12.754+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'load_company_info_to_dwh', 'Staging_to_Datawarehouse', 'scheduled__2024-12-16T12:30:00+00:00', '--job-id', '443', '--raw', '--subdir', 'DAGS_FOLDER/company_info_etl.py', '--cfg-path', '/tmp/tmp7jjprdon']
+[2024-12-17T12:33:12.755+0000] {standard_task_runner.py:105} INFO - Job 443: Subtask Staging_to_Datawarehouse
+[2024-12-17T12:33:12.831+0000] {task_command.py:467} INFO - Running <TaskInstance: load_company_info_to_dwh.Staging_to_Datawarehouse scheduled__2024-12-16T12:30:00+00:00 [running]> on host 8e02006e0a25
+[2024-12-17T12:33:13.100+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflowDWH' AIRFLOW_CTX_DAG_ID='load_company_info_to_dwh' AIRFLOW_CTX_TASK_ID='Staging_to_Datawarehouse' AIRFLOW_CTX_EXECUTION_DATE='2024-12-16T12:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-12-16T12:30:00+00:00'
+[2024-12-17T12:33:13.101+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-17T12:33:13.128+0000] {base.py:84} INFO - Retrieving connection 'load_to_staging'
+[2024-12-17T12:33:13.168+0000] {base.py:84} INFO - Retrieving connection 'load_to_dwh'
+[2024-12-17T12:33:13.364+0000] {logging_mixin.py:190} INFO - ETL process completed successfully.
+[2024-12-17T12:33:13.365+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-12-17T12:33:13.383+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-17T12:33:13.384+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=load_company_info_to_dwh, task_id=Staging_to_Datawarehouse, run_id=scheduled__2024-12-16T12:30:00+00:00, execution_date=20241216T123000, start_date=20241217T123312, end_date=20241217T123313
+[2024-12-17T12:33:13.412+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-17T12:33:13.436+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-17T12:33:13.438+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

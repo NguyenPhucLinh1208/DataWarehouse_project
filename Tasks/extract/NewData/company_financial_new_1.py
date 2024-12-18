@@ -92,6 +92,11 @@ def main_report_new_1():
             print(f"Đã lưu dữ liệu sau {idx} mã chứng khoán.")
 
     # Lưu vào file sau khi hoàn thành tất cả
+
+    Total_Balance = Total_Balance.drop_duplicates()
+    Total_Income = Total_Income.drop_duplicates()
+    Total_CashFlow = Total_CashFlow.drop_duplicates()
+    
     Total_Balance["Status"] = "New"
     Total_Income["Status"] = "New"
     Total_CashFlow["Status"] = "New"

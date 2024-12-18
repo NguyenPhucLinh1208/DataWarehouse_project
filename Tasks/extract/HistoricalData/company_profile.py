@@ -1,6 +1,8 @@
-# export PYTHONPATH=/opt/datawarehouse
+import sys
+sys.path.append("/opt")
 
 import pandas as pd
+from vnstock3 import Vnstock
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
@@ -12,8 +14,19 @@ from ScrapingPackage.scraper import get_hosocongty_data
 
 def main_hosocongty():
 
-    with open("Tasks/extract/HistoricalData/MaCks.txt", "r") as f:
-        MaCks = [line.strip() for line in f]
+    # Lấy danh sách công ty
+    stock = Vnstock().stock(symbol='VCI', source='VCI')
+
+    MaCks = stock.listing.symbols_by_industries()
+    # Lọc theo cột 'organ_name' chứa chữ "bất động sản" (không phân biệt hoa thường)
+    filtered = MaCks[MaCks['icb_name3'].str.contains('bất động sản', case=False, na=False)]
+    filtered = filtered.reset_index(drop=True)
+    MaCk_bds = filtered['symbol']
+    # Lưu vào file csv
+    path = '/opt/Tasks/extract/HistoricalData/MaCks.txt' 
+    MaCk_bds.to_csv(path, index=False, header=False)
+
+    MaCks = MaCk_bds.tolist()
     
     # Khởi tạo trình duyệt
     driver = init_driver("http://chrome:4444/wd/hub")
@@ -37,24 +50,22 @@ def main_hosocongty():
         input_element.send_keys(Keys.BACKSPACE) # xóa
         input_element.send_keys(MaCK) # nhập mã chứng khoán
         input_element.send_keys(Keys.RETURN) # enter
-
-        # Lấy tên công ty
-        nameComp = WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, ".flex-none.font-bold.pt-1"))
-        )
-        nameComp = [nameComp.text.strip()]        
+    
 
         # lấy thông tin cơ bản
         TTCoBanData = get_hosocongty_data(driver, "TT cơ bản")
         # lấy thông tin niêm yết
         TTNiemYet = get_hosocongty_data(driver, "TT niêm yết")
+
+        # Lấy tên công ty
+        nameComp = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, ".flex-none.font-bold.pt-1"))
+        )
+        nameComp = [nameComp.text.strip()]    
         ComData = nameComp + TTCoBanData + TTNiemYet
 
         ComDatas.append(ComData)
     driver.quit()
-    return ComDatas
-
-if __name__ == "__main__":
 
     column_names = [
     'Tên công ty', 'Mã SIC', 'Tên ngành', 'Mã ngành ICB', 'Năm thành lập', 'Vốn điều lệ', 
@@ -62,9 +73,8 @@ if __name__ == "__main__":
     'Giá chào sàn (x1000)', 'KL đang niêm yết', 'Thị giá vốn', 'SLCP lưu hành'
     ]
 
-    ComDatas = main_hosocongty()
     company_info = pd.DataFrame(ComDatas, columns = column_names)
-    company_info.to_csv("/opt/datawarehouse/Tasks/extract/HistoricalData/company_info.csv", index=False)
+    company_info.to_csv("/opt/Tasks/extract/HistoricalData/company_info.csv", index=False)
 
     print("Lấy data Hồ Sơ Công Ty thành công")
         

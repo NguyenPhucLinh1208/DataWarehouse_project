@@ -77,7 +77,7 @@ default_args = {
 with DAG(
     dag_id="parallel_new_price_with_group",
     default_args=default_args,
-    schedule_interval= '0 20 * * 1-5', # tự động chạy lúc 8h tối, từ thứ 2 đến thứ 6 hàng tuần
+    schedule_interval= '45 19 * * 1-5', # tự động chạy lúc 19h45 tối, từ thứ 2 đến thứ 6 hàng tuần
     catchup=False,
 ) as dag:
 

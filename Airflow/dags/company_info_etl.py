@@ -5,24 +5,32 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 from datetime import datetime
 from airflow.operators.empty import EmptyOperator
+from datetime import timedelta
 
 from Tasks.Load_data.load_data_to_staging import load_csv_to_db_using_copy
 from Tasks.transform_and_load_data.transform_and_load import hosocongty_transform_and_load
+from Tasks.extract.HistoricalData.company_profile import main_hosocongty
 default_args = {
     'owner': 'airflowDWH',
     'start_date': datetime(2024, 12, 6),
-    'retries': 0,
+    'retries': 1,
+    'retry_delay': timedelta(seconds=30)
 }
 
 with DAG(
-    dag_id="load_company_info_to_staging_db",
+    dag_id="load_company_info_to_dwh",
     default_args=default_args,
-    schedule_interval=None,
+    schedule_interval='30 19 * * 1-5',
     catchup=False,
 ) as dag:
 
     # Điểm bắt đầu DAG
     start = EmptyOperator(task_id="start")
+
+    extract_company_info = PythonOperator(
+        task_id = "extract_company_info",
+        python_callable=main_hosocongty
+    )
 
     load_to_db = PythonOperator(
         task_id = "load_company_info_to_db",
@@ -41,4 +49,4 @@ with DAG(
     # Điểm kết thúc DAG
     end = EmptyOperator(task_id="end")
 
-    start >> load_to_db >> load_to_dim_company >> end
+    start >> extract_company_info >> load_to_db >> load_to_dim_company >> end

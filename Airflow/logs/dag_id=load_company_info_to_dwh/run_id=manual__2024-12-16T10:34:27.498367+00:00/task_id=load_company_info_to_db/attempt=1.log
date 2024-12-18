@@ -1,0 +1,19 @@
+[2024-12-16T10:37:44.146+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-16T10:37:44.174+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: load_company_info_to_dwh.load_company_info_to_db manual__2024-12-16T10:34:27.498367+00:00 [queued]>
+[2024-12-16T10:37:44.187+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: load_company_info_to_dwh.load_company_info_to_db manual__2024-12-16T10:34:27.498367+00:00 [queued]>
+[2024-12-16T10:37:44.187+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-12-16T10:37:44.276+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): load_company_info_to_db> on 2024-12-16 10:34:27.498367+00:00
+[2024-12-16T10:37:44.292+0000] {logging_mixin.py:190} WARNING - /usr/local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=3786) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-12-16T10:37:44.293+0000] {standard_task_runner.py:72} INFO - Started process 3788 to run task
+[2024-12-16T10:37:44.293+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'load_company_info_to_dwh', 'load_company_info_to_db', 'manual__2024-12-16T10:34:27.498367+00:00', '--job-id', '413', '--raw', '--subdir', 'DAGS_FOLDER/company_info_etl.py', '--cfg-path', '/tmp/tmpr1wi4vhm']
+[2024-12-16T10:37:44.296+0000] {standard_task_runner.py:105} INFO - Job 413: Subtask load_company_info_to_db
+[2024-12-16T10:37:44.389+0000] {task_command.py:467} INFO - Running <TaskInstance: load_company_info_to_dwh.load_company_info_to_db manual__2024-12-16T10:34:27.498367+00:00 [running]> on host 8e02006e0a25
+[2024-12-16T10:37:44.770+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflowDWH' AIRFLOW_CTX_DAG_ID='load_company_info_to_dwh' AIRFLOW_CTX_TASK_ID='load_company_info_to_db' AIRFLOW_CTX_EXECUTION_DATE='2024-12-16T10:34:27.498367+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-16T10:34:27.498367+00:00'
+[2024-12-16T10:37:44.771+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-16T10:37:44.880+0000] {base.py:84} INFO - Retrieving connection 'load_to_staging'
+[2024-12-16T10:37:44.957+0000] {logging_mixin.py:190} INFO - Dữ liệu đã được tải thành công vào bảng HoSoCongTy.
+[2024-12-16T10:37:44.958+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-12-16T10:37:44.995+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-16T10:37:44.995+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=load_company_info_to_dwh, task_id=load_company_info_to_db, run_id=manual__2024-12-16T10:34:27.498367+00:00, execution_date=20241216T103427, start_date=20241216T103744, end_date=20241216T103744
+[2024-12-16T10:37:45.033+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-16T10:37:45.059+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
