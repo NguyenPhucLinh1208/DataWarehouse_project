@@ -50,16 +50,3 @@ CREATE TABLE LuuChuyenTienTe (
     Status VARCHAR(10)
 );
 
-CREATE TABLE KetQuaGiaoDich (
-    Thoi_Gian DATE,
-    Gia TEXT,
-    Khoi_Luong INTEGER,
-    Loai_Giao_Dich TEXT,
-    ID TEXT,
-    Ma_SIC TEXT
-);
-
-create table TaiKhoan (
-	ChiTieu TEXT,
-	Ma_Tai_Khoan TEXT
-);

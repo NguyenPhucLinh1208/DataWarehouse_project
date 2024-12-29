@@ -4,3 +4,9 @@ cookies.pkl
 .env
 Webserver_config.py
 airflow-webserver.pid
+Airflow/logs/
+config 
+plugings
+TestVnStock.ipynb
+DWHjupytor.ipynb
+*.csv

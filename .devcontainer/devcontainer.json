@@ -25,21 +25,21 @@
         "8974": {
             "label": "Airflow Scheduler"
         },
-        // "2181": {
-        //     "label": "Zookeeper"
-        // },
-        // "9092": {
-        //     "label": "Kafka Broker"
-        // },
-        // "8081": {
-        //     "label": "Schema Registry"
-        // },
-        // "8083": {
-        //     "label": "Kafka Connect"
-        // },
-        // "8088": {
-        //     "label": "Kafka KSQL"
-        // },
+        "2181": {
+            "label": "Zookeeper"
+        },
+        "9092": {
+            "label": "Kafka Broker"
+        },
+        "8081": {
+            "label": "Schema Registry"
+        },
+        "8083": {
+            "label": "Kafka Connect"
+        },
+        "8088": {
+            "label": "Kafka KSQL"
+        },
         "4444": {
             "label": "Selenium Chrome Driver"
         }

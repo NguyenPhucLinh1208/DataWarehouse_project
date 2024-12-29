@@ -1,3 +1,0 @@
-[2024-12-12T13:51:37.750+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
-[2024-12-12T13:51:37.779+0000] {taskinstance.py:2603} INFO - Dependencies not met for <TaskInstance: parallel_new_price_with_group.combine_csv_files scheduled__2024-12-11T13:49:00+00:00 [success]>, dependency 'Task Instance State' FAILED: Task is in the 'success' state.
-[2024-12-12T13:51:37.784+0000] {local_task_job_runner.py:166} INFO - Task is not able to be run

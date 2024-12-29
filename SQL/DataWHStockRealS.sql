@@ -10,12 +10,6 @@ CREATE TABLE dim_icb (
     Ten_nhom_nganh VARCHAR(255)
 );
 
--- Bảng dim_match_period
-CREATE TABLE dim_match_period (
-    Match_period VARCHAR(50) PRIMARY KEY,
-    Mo_ta VARCHAR(255)
-);
-
 -- Bảng dim_match_type
 CREATE TABLE dim_match_type (
     Match_type VARCHAR(50) PRIMARY KEY
@@ -72,14 +66,12 @@ CREATE TABLE dim_company (
 
 -- Bảng fact_intraday_trading
 CREATE TABLE fact_intraday_trading (
-    Ma_SIC VARCHAR(50),
-    Match_period VARCHAR(50),
-    Match_type VARCHAR(50),
-    price NUMERIC,
-    volume NUMERIC,
     Time TIMESTAMP,
+    price NUMERIC(10,2),
+    volume BIGINT,
+    Match_type VARCHAR(50),
+    Ma_SIC VARCHAR(50),
     FOREIGN KEY (Ma_SIC) REFERENCES dim_company(Ma_SIC),
-    FOREIGN KEY (Match_period) REFERENCES dim_match_period(Match_period),
     FOREIGN KEY (Match_type) REFERENCES dim_match_type(Match_type)
 );
 

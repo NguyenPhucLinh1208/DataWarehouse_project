@@ -1,0 +1,27 @@
+{
+    "type": "record",
+    "name": "ProcessedStockIntraday",
+    "fields": [
+      {
+        "name": "time",
+        "type": "long"
+      },
+      {
+        "name": "price",
+        "type": "float"
+      },
+      {
+        "name": "volume",
+        "type": "long"
+      },
+      {
+        "name": "match_type",
+        "type": "string"
+      },
+      {
+        "name": "Ma_SIC",
+        "type": "string"
+      }
+    ]
+  }
+  
