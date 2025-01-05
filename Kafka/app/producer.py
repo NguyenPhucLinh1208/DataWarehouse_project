@@ -11,43 +11,43 @@ from vnstock3 import Vnstock
 
 # địa chỉ Kafka Broker và Schema Registry
 KAFKA_BROKER = 'kafka0:9093'
-SCHEMA_REGISTRY_URL = 'http://schema-registry:8081'
-# Tên topic Kafka lưu raw
 TOPIC = 'stock-raw'
-# Đường dẫn đến tệp schema Avro
+
+SCHEMA_REGISTRY_URL = 'http://schema-registry:8081'
 SCHEMA_PATH = '/opt/Kafka/schema/avro_schema_raw.avsc'
+# Cấu hình Schema Registry Client
+schema_registry_conf = {'url': SCHEMA_REGISTRY_URL}
+schema_registry_client = SchemaRegistryClient(schema_registry_conf)
+# Tải schema Avro từ tệp
+with open(SCHEMA_PATH, 'r') as schema_file:
+    avro_schema_str = schema_file.read()
+# Khởi tạo AvroSerializer và AvroDeserializer
+avro_serializer = AvroSerializer(schema_registry_client, avro_schema_str)
+avro_deserializer = AvroDeserializer(schema_registry_client, avro_schema_str)
+
 # consumer group
 CONSUMER_GROUP = 'producer-group'
 # Khởi tạo Vnstock
 stock = Vnstock().stock(source='VCI')
 
-# Cấu hình Schema Registry Client
-schema_registry_conf = {'url': SCHEMA_REGISTRY_URL}
-schema_registry_client = SchemaRegistryClient(schema_registry_conf)
-
-# Tải schema Avro từ tệp
-with open(SCHEMA_PATH, 'r') as schema_file:
-    avro_schema_str = schema_file.read()
-
-# Khởi tạo AvroSerializer và AvroDeserializer
-avro_serializer = AvroSerializer(schema_registry_client, avro_schema_str)
-avro_deserializer = AvroDeserializer(schema_registry_client, avro_schema_str)
 
 def load_existing_keys():
     """Tải các key hiện có từ topic vào set."""
     consumer_conf = {
         'bootstrap.servers': KAFKA_BROKER,
-        'group.id': CONSUMER_GROUP,
+        'group.id': f"{CONSUMER_GROUP}-{time.time()}",
         'auto.offset.reset': 'earliest',
         'enable.auto.commit': False,
         'key.deserializer': StringDeserializer('utf_8'),
         'value.deserializer': avro_deserializer
     }
     consumer = DeserializingConsumer(consumer_conf)
+    # Đăng ký topic cần đọc
+    consumer.subscribe([TOPIC])
     set_id = set()
     try:
         while True:
-            msg = consumer.poll(timeout=10.0)
+            msg = consumer.poll(timeout=15.0)
             if msg is None:
                 break
             if msg.error():
@@ -73,8 +73,7 @@ def runproducer():
             print(f"Message delivery failed: {err}")
         else:
             print(f"Message delivered to {msg.topic()} [{msg.partition()}] at offset {msg.offset()}")
-            set_id.add(msg.key())  # Thêm key vào set
-
+         
     def fetch_and_send(symbols):
         """Lấy dữ liệu cổ phiếu và gửi đến Kafka."""
         producer_conf = {
@@ -83,6 +82,7 @@ def runproducer():
             'value.serializer': avro_serializer
         }
         producer = SerializingProducer(producer_conf)
+
         for symbol in symbols:
             print(f"Fetching data for {symbol}...")
             try:
@@ -96,19 +96,23 @@ def runproducer():
                 df['Ma_SIC'] = symbol
 
                 for _, row in df.iterrows():
-                    message = row.to_dict()
-                    message_id = message['id']
 
-                    if message_id not in set_id:
+                    message = row.to_dict()
+                    message_key = f"{message['time']}_{message['volume']}_{message['match_type']}_{message['Ma_SIC']}_{message['price']}"
+
+                    if message_key not in set_id:
+                        set_id.add(message_key)
                         try:
                             producer.produce(
                                 topic=TOPIC,
-                                key=message_id,
+                                key=message_key,
                                 value=message,
                                 on_delivery=delivery_report
                             )
                         except Exception as e:
                             print(f"Message production failed: {e}")
+                    else:
+                        break
             except Exception as e:
                 print(f"Error fetching data for {symbol}: {e}")
                 continue
@@ -124,3 +128,6 @@ def runproducer():
     while True:
         fetch_and_send(SYMBOLS)
         time.sleep(30)
+    
+if __name__ == "__main__":
+    runproducer()
